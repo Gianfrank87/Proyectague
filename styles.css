@@ -1,0 +1,486 @@
+/* ================================
+   NUEVA PALETA: CALIDEZ NATURAL
+   ================================ */
+:root {
+    --bg-primary: #F9F7F2;      /* Crema claro (fondo) */
+    --bg-secondary: #FFFFFF;    /* Blanco puro para tarjetas */
+    --accent: #8D6E63;         /* Café madera / Bronce mate */
+    --accent-dark: #5D4037;    /* Marrón profundo para títulos */
+    --text-main: #455A64;      /* Gris cálido para lectura */
+    --text-light: #90A4AE;     /* Gris suave para detalles */
+    --border: rgba(141, 110, 99, 0.2);
+}
+
+/* ================================
+   ESTILOS BASE
+   ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    /* Degradado sutil para dar profundidad */
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F9F7F2 100%);
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* ================================
+   HEADER & LOGO
+   ================================ */
+.header {
+    padding: 50px 20px 30px;
+    text-align: center;
+    animation: fadeInDown 1s ease;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-logo {
+    width: 100%;
+    max-width: 180px; /* Tamaño refinado */
+    height: auto;
+    margin-bottom: 10px;
+    /* Filtro para armonizar el logo con el fondo claro si fuera necesario */
+    filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.05));
+    transition: transform 0.4s ease;
+}
+
+.divider {
+    width: 50px;
+    height: 2px;
+    background: var(--accent);
+    margin: 15px auto;
+    opacity: 0.6;
+}
+
+.tagline {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-dark);
+    font-weight: 600;
+}
+
+/* ================================
+   CONTENEDOR DE TARJETAS (INDEX)
+   =============================== */
+.container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ================================
+   TARJETAS ESTILO "NATURAL CARD"
+   ================================ */
+.card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px; /* Bordes más rectos como la arquitectura de la imagen */
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(93, 64, 55, 0.1);
+    border-color: var(--accent);
+}
+
+.image-wrapper {
+    height: 230px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.05);
+}
+
+/* ================================
+   CONTENIDO DE LA TARJETA
+   ================================ */
+.card-content {
+    padding: 30px;
+    text-align: center; /* Alineación centrada para un look más clásico */
+}
+
+.category {
+    color: var(--accent);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: var(--accent-dark);
+    letter-spacing: 1px;
+}
+
+.card-description {
+    color: var(--text-main);
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.card-button {
+    display: inline-block;
+    padding: 10px 30px;
+    background: transparent;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-button {
+    background: var(--accent);
+    color: #FFF;
+}
+
+/* ================================
+   FOOTER
+   ================================ */
+.footer {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #F0EDE7; /* Un tono más abajo para cerrar la página */
+    color: var(--accent-dark);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+/* ================================
+   ESTILOS PARA PÁGINAS INTERNAS
+   ================================ */
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    letter-spacing: 1px;
+}
+
+/* Content Sections */
+.content-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    color: var(--accent-dark);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Rooms Grid */
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.room-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.15);
+}
+
+.room-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.room-info {
+    padding: 30px;
+}
+
+.room-type {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: var(--accent-dark);
+    margin-bottom: 15px;
+}
+
+.room-description {
+    color: var(--text-main);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.room-features {
+    list-style: none;
+    padding: 0;
+}
+
+.room-features li {
+    padding: 8px 0;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(141, 110, 99, 0.1);
+}
+
+.room-features li:last-child {
+    border-bottom: none;
+}
+
+.room-features li:before {
+    content: "✓ ";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* Amenities Grid */
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.amenity-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.amenity-item:hover {
+    border-color: var(--accent);
+    box-shadow: 0 5px 20px rgba(93, 64, 55, 0.1);
+}
+
+.amenity-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.amenity-title {
+    font-weight: 600;
+    color: var(--accent-dark);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.amenity-description {
+    color: var(--text-main);
+    font-size: 0.9rem;
+}
+
+/* Info Box */
+.info-box {
+    background: var(--bg-secondary);
+    border-left: 4px solid var(--accent);
+    padding: 30px;
+    margin: 40px 0;
+    border-radius: 4px;
+}
+
+.info-box h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--accent-dark);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.info-item {
+    padding: 15px;
+    background: var(--bg-primary);
+    border-radius: 4px;
+}
+
+.info-label {
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.info-value {
+    color: var(--accent-dark);
+    font-size: 1.1rem;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(141, 110, 99, 0.05), rgba(93, 64, 55, 0.05));
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 18px 50px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background: var(--accent-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(93, 64, 55, 0.3);
+}
+
+/* Back Link */
+.back-link {
+    display: inline-block;
+    margin: 30px 0;
+    padding: 12px 30px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1.5px solid var(--accent);
+    border-radius: 4px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 768px) {
+    .main-logo { max-width: 140px; }
+    .header { padding: 30px 20px; }
+    .container { gap: 25px; padding: 20px; }
+    .card-title { font-size: 1.4rem; }
+    
+    /* Hero responsive */
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .rooms-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

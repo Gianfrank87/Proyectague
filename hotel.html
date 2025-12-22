@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel - El Tague</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="tague2.svg" class="main-logo">        
+            <div class="divider"></div>
+            <p class="tagline">Exclusividad & Descanso en Ruta 14, Gualeguaychú</p>
+        </div>
+        <a href="index.html" class="back-link">← Volver al Inicio</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: url('https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Hotel Tagüé</h1>
+            <p>Confort de primera categoría y vistas panorámicas. Una estadía diseñada para el relax total.</p>
+        </div>
+    </section>
+
+    <!-- Descripción Principal -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Su Mejor Opción de Descanso</h2>
+            <p class="section-subtitle">
+                El Hotel Tagüé cuenta con 40 habitaciones decoradas con distinción y sencillez, ideales para el descanso. 
+                Si necesita hacer un alto en su viaje, organizar sus visitas de trabajo en la zona o simplemente acercar destinos, 
+                no deje de visitarnos.
+            </p>
+        </div>
+
+        <!-- Info Box Check-in/out -->
+        <div class="info-box">
+            <h3>Información de Estadía</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Check-in</div>
+                    <div class="info-value">13:00 hs</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Check-out</div>
+                    <div class="info-value">10:00 hs</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Ubicación</div>
+                    <div class="info-value">Ruta Nacional 14, Km 55</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Distancia</div>
+                    <div class="info-value">12 km de Gualeguaychú</div>
+                </div>
+            </div>
+            <p style="margin-top: 20px; color: var(--text-light); font-size: 0.9rem;">
+                *Puede contratar salida late check-out según disponibilidad
+            </p>
+        </div>
+    </section>
+
+    <!-- Habitaciones -->
+    <section class="content-section" style="background: var(--bg-primary); padding: 80px 20px; margin: 0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-header">
+                <h2 class="section-title">Nuestras Habitaciones</h2>
+                <p class="section-subtitle">
+                    Todas nuestras habitaciones están equipadas para brindarle el máximo confort durante su estadía
+                </p>
+            </div>
+
+            <div class="rooms-grid">
+                <!-- Habitación Individual -->
+                <div class="room-card">
+                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg" alt="Habitación Individual" class="room-image">
+                    <div class="room-info">
+                        <h3 class="room-type">Habitación Individual</h3>
+                        <p class="room-description">Perfecta para viajeros de negocios o turistas que buscan comodidad y privacidad.</p>
+                        <ul class="room-features">
+                            <li>Sommier King Size SIMMONS</li>
+                            <li>Escritorio de trabajo</li>
+                            <li>Baño privado completo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Habitación Doble -->
+                <div class="room-card">
+                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto027.jpg" alt="Habitación Doble" class="room-image">
+                    <div class="room-info">
+                        <h3 class="room-type">Habitación Doble</h3>
+                        <p class="room-description">Ideal para parejas que buscan un espacio confortable y acogedor.</p>
+                        <ul class="room-features">
+                            <li>Cama matrimonial King Size</li>
+                            <li>Espacio amplio</li>
+                            <li>Vista al parque</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Habitación Triple -->
+                <div class="room-card">
+                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg" alt="Habitación Triple" class="room-image">
+                    <div class="room-info">
+                        <h3 class="room-type">Habitación Triple</h3>
+                        <p class="room-description">Perfecta para grupos pequeños o familias que viajan juntas.</p>
+                        <ul class="room-features">
+                            <li>Capacidad para 3 personas</li>
+                            <li>Camas confortables</li>
+                            <li>Espacio optimizado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Habitación Cuádruple -->
+                <div class="room-card">
+                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto027.jpg" alt="Habitación Cuádruple" class="room-image">
+                    <div class="room-info">
+                        <h3 class="room-type">Habitación Cuádruple</h3>
+                        <p class="room-description">Especialmente diseñada para familias que buscan estar juntas.</p>
+                        <ul class="room-features">
+                            <li>Capacidad para 4 personas</li>
+                            <li>Ambiente familiar</li>
+                            <li>Máxima comodidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Características Comunes -->
+            <div class="info-box" style="margin-top: 60px;">
+                <h3>Todas las Habitaciones Incluyen</h3>
+                <div class="rooms-grid" style="margin-top: 30px;">
+                    <ul class="room-features">
+                        <li>LED TV 32"</li>
+                        <li>Aire Acondicionado / Calefacción</li>
+                        <li>Wi-Fi de Alta Velocidad</li>
+                        <li>Desayuno Incluido</li>
+                    </ul>
+                    <ul class="room-features">
+                        <li>Sommier King Size</li>
+                        <li>Secador de Pelo</li>
+                        <li>Frigobar</li>
+                        <li>Escritorio</li>
+                    </ul>
+                    <ul class="room-features">
+                        <li>Baño Privado</li>
+                        <li>Artículos de Tocador</li>
+                        <li>Servicio de Limpieza Diario</li>
+                        <li>Ropa de Cama Premium</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios e Instalaciones -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Servicios e Instalaciones</h2>
+            <p class="section-subtitle">
+                Todo lo que necesita para una estadía perfecta en un solo lugar
+            </p>
+        </div>
+
+        <div class="amenities-grid">
+            <div class="amenity-item">
+                <div class="amenity-icon">🍽️</div>
+                <h3 class="amenity-title">Restaurante 24hs</h3>
+                <p class="amenity-description">Parador El Tagüé con todas las posibilidades gastronómicas</p>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-icon">🏊</div>
+                <h3 class="amenity-title">Piscina & Solarium</h3>
+                <p class="amenity-description">Disfrute del sol y refrescarse en nuestra piscina exterior</p>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-icon">🧒</div>
+                <h3 class="amenity-title">Área Infantil</h3>
+                <p class="amenity-description">Juegos infantiles y piscina para niños</p>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-icon">🅿️</div>
+                <h3 class="amenity-title">Estacionamiento</h3>
+                <p class="amenity-description">Amplio estacionamiento gratuito y vigilado</p>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-icon">💆</div>
+                <h3 class="amenity-title">Termas del Guaychú</h3>
+                <p class="amenity-description">Convenio especial con las termas de la región</p>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-icon">🔒</div>
+                <h3 class="amenity-title">Seguridad</h3>
+                <p class="amenity-description">Sistema de alarma, cámaras de vigilancia y cobertura médica</p>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-icon">📶</div>
+                <h3 class="amenity-title">Wi-Fi Gratis</h3>
+                <p class="amenity-description">Internet de alta velocidad en todas las instalaciones</p>
+            </div>
+
+            <div class="amenity-item">
+                <div class="amenity-icon">🛎️</div>
+                <h3 class="amenity-title">Recepción 24hs</h3>
+                <p class="amenity-description">Personal a su disposición las 24 horas del día</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <h2 class="section-title">Reserve su Estadía</h2>
+        <p class="section-subtitle" style="margin-bottom: 30px;">
+            Viva una experiencia única en el corazón del litoral argentino
+        </p>
+        <a href="tel:+5493446621925" class="cta-button">Llamar Ahora</a>
+        <a href="https://wa.me/5493446621925" class="cta-button" style="margin-left: 20px; background: #25D366;">WhatsApp</a>
+    </section>
+
+    <footer class="footer">
+        <p>RUTA NACIONAL N° 14 km 55 · ENTRE RÍOS · ARGENTINA</p>
+        <p style="margin-top: 10px; font-size: 0.65rem;">Tel: +54 9 3446 621925</p>
+    </footer>
+
+</body>
+</html>
