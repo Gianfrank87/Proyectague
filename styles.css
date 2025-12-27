@@ -2,12 +2,12 @@
    NUEVA PALETA: CALIDEZ NATURAL
    ================================ */
 :root {
-    --bg-primary: #F9F7F2;      /* Crema claro (fondo) */
-    --bg-secondary: #FFFFFF;    /* Blanco puro para tarjetas */
-    --accent: #8D6E63;         /* Café madera / Bronce mate */
-    --accent-dark: #5D4037;    /* Marrón profundo para títulos */
-    --text-main: #455A64;      /* Gris cálido para lectura */
-    --text-light: #90A4AE;     /* Gris suave para detalles */
+    --bg-primary: #F9F7F2;
+    --bg-secondary: #FFFFFF;
+    --accent: #8D6E63;
+    --accent-dark: #5D4037;
+    --text-main: #455A64;
+    --text-light: #90A4AE;
     --border: rgba(141, 110, 99, 0.2);
 }
 
@@ -23,7 +23,6 @@
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--bg-primary);
-    /* Degradado sutil para dar profundidad */
     background-image: linear-gradient(180deg, #FFFFFF 0%, #F9F7F2 100%);
     color: var(--text-main);
     min-height: 100vh;
@@ -49,10 +48,9 @@ body {
 
 .main-logo {
     width: 100%;
-    max-width: 180px; /* Tamaño refinado */
+    max-width: 180px;
     height: auto;
     margin-bottom: 10px;
-    /* Filtro para armonizar el logo con el fondo claro si fuera necesario */
     filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.05));
     transition: transform 0.4s ease;
 }
@@ -93,7 +91,7 @@ body {
 .card {
     background: var(--bg-secondary);
     border: 1px solid var(--border);
-    border-radius: 4px; /* Bordes más rectos como la arquitectura de la imagen */
+    border-radius: 4px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s ease;
@@ -127,7 +125,7 @@ body {
    ================================ */
 .card-content {
     padding: 30px;
-    text-align: center; /* Alineación centrada para un look más clásico */
+    text-align: center;
 }
 
 .category {
@@ -179,7 +177,7 @@ body {
 .footer {
     padding: 60px 20px;
     text-align: center;
-    background-color: #F0EDE7; /* Un tono más abajo para cerrar la página */
+    background-color: #F0EDE7;
     color: var(--accent-dark);
     font-size: 0.7rem;
     letter-spacing: 2px;
@@ -257,6 +255,74 @@ body {
     max-width: 700px;
     margin: 0 auto;
     line-height: 1.8;
+}
+
+/* Video Container */
+.video-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(93, 64, 55, 0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Gallery Section */
+.gallery-section {
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/* Gallery Dense - 3 columnas en desktop */
+.photo-gallery-dense {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(93, 64, 55, 0.1);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.2);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
 }
 
 /* Rooms Grid */
@@ -380,6 +446,7 @@ body {
     color: var(--accent-dark);
     margin-bottom: 20px;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .info-grid {
@@ -392,6 +459,7 @@ body {
     padding: 15px;
     background: var(--bg-primary);
     border-radius: 4px;
+    text-align: center;
 }
 
 .info-label {
@@ -457,6 +525,547 @@ body {
 }
 
 /* ================================
+   ESTILOS ESPECÍFICOS PARADOR
+   ================================ */
+
+/* Menu Grid */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.menu-category {
+    background: var(--bg-secondary);
+    padding: 35px 25px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.menu-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(93, 64, 55, 0.12);
+    border-color: var(--accent);
+}
+
+.menu-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.menu-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--accent-dark);
+    margin-bottom: 15px;
+}
+
+.menu-description {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Specialty Box */
+.specialty-box {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.2);
+}
+
+.specialty-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.specialty-box h4 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.specialty-box p {
+    font-size: 1rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Services Grid - Parador */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: var(--bg-secondary);
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px rgba(93, 64, 55, 0.12);
+}
+
+.service-icon {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.service-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: var(--accent-dark);
+    margin-bottom: 15px;
+}
+
+.service-description {
+    color: var(--text-main);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.service-companies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.service-companies span {
+    background: var(--bg-primary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--accent);
+    border: 1px solid var(--border);
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.product-item {
+    background: var(--bg-secondary);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.product-item:hover {
+    border-color: var(--accent);
+    box-shadow: 0 5px 20px rgba(93, 64, 55, 0.1);
+}
+
+.product-item h4 {
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.product-item p {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* ================================
+   ESTILOS ESPECÍFICOS CASA DE CAMPO
+   ================================ */
+
+/* Campo Features Grid */
+.campo-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.campo-feature-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 40px 30px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.campo-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.15);
+    border-color: var(--accent);
+}
+
+.campo-feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.campo-feature-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--accent-dark);
+    margin-bottom: 15px;
+}
+
+.campo-feature-description {
+    color: var(--text-main);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.campo-feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.campo-feature-list li {
+    padding: 10px 0;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(141, 110, 99, 0.1);
+}
+
+.campo-feature-list li:last-child {
+    border-bottom: none;
+}
+
+.campo-feature-list li:before {
+    content: "• ";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Activities Grid */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.activity-item {
+    background: var(--bg-secondary);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.activity-item:hover {
+    border-color: var(--accent);
+    box-shadow: 0 5px 20px rgba(93, 64, 55, 0.1);
+    transform: translateY(-3px);
+}
+
+.activity-item h4 {
+    color: var(--accent-dark);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.activity-item p {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+/* Events Grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-top: 50px;
+}
+
+.event-card {
+    background: var(--bg-secondary);
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 25px rgba(93, 64, 55, 0.12);
+    transform: translateY(-5px);
+}
+
+.event-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: var(--accent-dark);
+    margin-bottom: 15px;
+}
+
+.event-card p {
+    color: var(--text-main);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+/* Services List Inline */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.service-item-inline {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: var(--bg-primary);
+    border-radius: 4px;
+}
+
+.service-check {
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+/* Rental Options */
+.rental-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.rental-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.rental-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(93, 64, 55, 0.15);
+    border-color: var(--accent);
+}
+
+.rental-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.rental-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: var(--accent-dark);
+    margin-bottom: 15px;
+}
+
+.rental-description {
+    color: var(--text-main);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.rental-detail {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Info List */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.info-list li {
+    padding: 12px 0;
+    color: var(--text-main);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(141, 110, 99, 0.1);
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list li:before {
+    content: "→ ";
+    color: var(--accent);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Gallery Hidden Items */
+.gallery-hidden {
+    display: none;
+}
+
+/* Gallery Toggle Button */
+.gallery-btn-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.gallery-toggle-btn {
+    padding: 15px 40px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.gallery-toggle-btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(93, 64, 55, 0.3);
+}
+
+/* Image Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    padding: 20px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.95);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: white;
+    font-size: 50px;
+    font-weight: 300;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10000;
+}
+
+.modal-close:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+.modal-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+    font-size: 1rem;
+    max-width: 80%;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(141, 110, 99, 0.8);
+    color: white;
+    border: none;
+    padding: 20px 15px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.modal-nav:hover {
+    background: var(--accent);
+}
+
+.modal-prev {
+    left: 30px;
+}
+
+.modal-next {
+    right: 30px;
+}
+
+@media (max-width: 768px) {
+    .modal-close {
+        top: 15px;
+        right: 20px;
+        font-size: 35px;
+    }
+    
+    .modal-nav {
+        padding: 15px 10px;
+        font-size: 24px;
+    }
+    
+    .modal-prev {
+        left: 10px;
+    }
+    
+    .modal-next {
+        right: 10px;
+    }
+    
+    .modal-caption {
+        bottom: 15px;
+        font-size: 0.85rem;
+        padding: 10px 20px;
+    }
+}
+
+/* ================================
    RESPONSIVE
    ================================ */
 @media (max-width: 768px) {
@@ -465,7 +1074,6 @@ body {
     .container { gap: 25px; padding: 20px; }
     .card-title { font-size: 1.4rem; }
     
-    /* Hero responsive */
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -474,9 +1082,41 @@ body {
         font-size: 2rem;
     }
     
+    .photo-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+    
+    .photo-gallery-dense {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
     .rooms-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .campo-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .rental-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .photo-gallery-dense {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 

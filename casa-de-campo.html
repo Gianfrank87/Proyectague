@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Campo - El Tague</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="tague2.svg" class="main-logo">        
+            <div class="divider"></div>
+            <p class="tagline">Exclusividad & Descanso en Ruta 14, Gualeguaychú</p>
+        </div>
+        <a href="index.html" class="back-link">← Volver al Inicio</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="background-image: url('campo.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Casa de Campo Tagüé</h1>
+            <p>Un refugio íntimo diseñado para desconectar del mundo y reconectar con la naturaleza.</p>
+        </div>
+    </section>
+
+    <!-- Video de Presentación -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Descubra Nuestro Refugio Natural</h2>
+            <p class="section-subtitle">
+                Un recorrido visual por nuestro complejo de 150 hectáreas a orillas del río Uruguay
+            </p>
+        </div>
+        
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/LPkgZjcuvBs" 
+                title="Casa de Campo El Tagüé" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- Descripción Principal -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Privacidad Absoluta en Medio de la Naturaleza</h2>
+            <p class="section-subtitle">
+                Nuestro complejo de campo es un espacio exclusivo de 150 hectáreas a orillas del río Uruguay, 
+                diseñado para quienes buscan privacidad, tranquilidad y contacto directo con la naturaleza. 
+                Un lugar perfecto para retiros, eventos privados o simplemente descansar en un entorno único.
+            </p>
+        </div>
+
+        <!-- Info Box Características -->
+        <div class="info-box">
+            <h3>Características del Complejo</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Superficie</div>
+                    <div class="info-value">150 hectáreas</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Capacidad</div>
+                    <div class="info-value">Hasta 20 personas</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Ubicación</div>
+                    <div class="info-value">A orillas del Río Uruguay</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Acceso</div>
+                    <div class="info-value">15 min desde Ruta 14</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Fotos - INTERIORES -->
+    <section class="gallery-section">
+        <div class="section-header">
+            <h2 class="section-title">Interiores</h2>
+            <p class="section-subtitle">
+                Espacios cálidos y confortables diseñados para el descanso
+            </p>
+        </div>
+
+        <div class="photo-gallery-dense">
+            <div class="gallery-item">
+                <img src="fotos interiores/interior1.png" alt="Living principal">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos interiores/interior2.png" alt="Dormitorio suite">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos interiores/interior3.png" alt="Cocina equipada">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos interiores/interior4.png" alt="Comedor">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos interiores/interior5.png" alt="Baño principal">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos interiores/interior6.png" alt="Sala de estar">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos interiores/interior7.png" alt="Detalle decoración">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos interiores/interior8.png" alt="Habitación doble">
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Fotos - EXTERIORES -->
+    <section class="gallery-section" style="background: var(--bg-primary); padding: 80px 20px; margin: 0;">
+        <div style="max-width: 1400px; margin: 0 auto;">
+            <div class="section-header">
+                <h2 class="section-title">Exteriores</h2>
+                <p class="section-subtitle">
+                    Naturaleza, espacios abiertos y vistas al río Uruguay
+                </p>
+            </div>
+
+            <div class="photo-gallery-dense" id="gallery-exteriores">
+                <!-- Primeras 9 fotos visibles -->
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior1.png" alt="Vista al río">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior2.png" alt="Atardecer en el campo">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior3.png" alt="Bosque nativo">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior4.png" alt="Senderos del campo">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior5.png" alt="Paisaje natural">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior6.png" alt="Muelle privado">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior7.png" alt="Vista panorámica">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior8.png" alt="Flora del campo">
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos exteriores/exterior9.png" alt="Cielo abierto">
+                </div>
+                
+                <!-- Fotos ocultas inicialmente -->
+                <div class="gallery-item gallery-hidden">
+                    <img src="fotos exteriores/exterior10.png" alt="Amanecer">
+                </div>
+                <div class="gallery-item gallery-hidden">
+                    <img src="fotos exteriores/exterior11.png" alt="Zona de camping">
+                </div>
+                <div class="gallery-item gallery-hidden">
+                    <img src="fotos exteriores/exterior12.png" alt="Flores silvestres">
+                </div>
+                <div class="gallery-item gallery-hidden">
+                    <img src="fotos exteriores/exterior13.png" alt="Naturaleza">
+                </div>
+                <div class="gallery-item gallery-hidden">
+                    <img src="fotos exteriores/exterior14.png" alt="Camino">
+                </div>
+                <div class="gallery-item gallery-hidden">
+                    <img src="fotos exteriores/exterior15.png" alt="Paisaje">
+                </div>
+            </div>
+            
+            <div class="gallery-btn-container">
+                <button class="gallery-toggle-btn" onclick="toggleGallery('exteriores')">
+                    <span class="btn-text-more">Ver Más Fotos</span>
+                    <span class="btn-text-less" style="display: none;">Ver Menos</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Fotos - LIFESTYLE -->
+    <section class="gallery-section">
+        <div class="section-header">
+            <h2 class="section-title">Lifestyle</h2>
+            <p class="section-subtitle">
+                Experiencias únicas en contacto con la naturaleza
+            </p>
+        </div>
+
+        <div class="photo-gallery-dense" id="gallery-lifestyle">
+            <!-- Primeras 9 fotos visibles -->
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle1.png" alt="Piscina">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle2.png" alt="Quincho y parrilla">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle3.png" alt="Relax en galería">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle4.png" alt="Atardecer desde el muelle">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle5.png" alt="Fogón nocturno">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle6.png" alt="Estrellas">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle7.png" alt="Vista aérea">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle8.png" alt="Fachada de día">
+            </div>
+            <div class="gallery-item">
+                <img src="fotos lifestyles/lifestyle9.png" alt="Momento de descanso">
+            </div>
+            
+            <!-- Fotos ocultas inicialmente -->
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle10.png" alt="Foto 10">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle11.png" alt="Foto 11">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle12.png" alt="Foto 12">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle13.png" alt="Foto 13">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle14.png" alt="Foto 14">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle15.png" alt="Foto 15">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle16.png" alt="Foto 16">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle17.png" alt="Foto 17">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle18.png" alt="Foto 18">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle19.png" alt="Foto 19">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle20.png" alt="Foto 20">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle21.png" alt="Foto 21">
+            </div>
+            <div class="gallery-item gallery-hidden">
+                <img src="fotos lifestyles/lifestyle22.png" alt="Foto 22">
+            </div>
+        </div>
+        
+        <div class="gallery-btn-container">
+            <button class="gallery-toggle-btn" onclick="toggleGallery('lifestyle')">
+                <span class="btn-text-more">Ver Más Fotos</span>
+                <span class="btn-text-less" style="display: none;">Ver Menos</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Modal para vista ampliada de imágenes -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+        <button class="modal-nav modal-prev" onclick="event.stopPropagation(); navigateImage(-1)">&#10094;</button>
+        <button class="modal-nav modal-next" onclick="event.stopPropagation(); navigateImage(1)">&#10095;</button>
+    </div>
+
+    <!-- Instalaciones -->
+    <section class="content-section" style="background: var(--bg-primary); padding: 80px 20px; margin: 0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-header">
+                <h2 class="section-title">Instalaciones & Comodidades</h2>
+                <p class="section-subtitle">
+                    Un complejo equipado con todas las comodidades modernas en un entorno natural preservado
+                </p>
+            </div>
+
+            <div class="campo-features-grid">
+                <div class="campo-feature-card">
+                    <div class="campo-feature-icon">🏡</div>
+                    <h3 class="campo-feature-title">Casa Principal</h3>
+                    <p class="campo-feature-description">Construcción de 300 m² con amplios espacios. Living con hogar a leña, comedor para 20 personas, cocina equipada y galería con vista al río.</p>
+                    <ul class="campo-feature-list">
+                        <li>5 dormitorios en suite</li>
+                        <li>Aire acondicionado en todas las habitaciones</li>
+                        <li>Baños completos con amenities</li>
+                        <li>Ropa de cama y toallas incluidas</li>
+                    </ul>
+                </div>
+
+                <div class="campo-feature-card">
+                    <div class="campo-feature-icon">🏊</div>
+                    <h3 class="campo-feature-title">Áreas Recreativas</h3>
+                    <p class="campo-feature-description">Espacios diseñados para el disfrute al aire libre y la relajación en contacto con la naturaleza.</p>
+                    <ul class="campo-feature-list">
+                        <li>Piscina climatizada de 12x6 metros</li>
+                        <li>Quincho con parrilla profesional</li>
+                        <li>Muelle privado sobre el río</li>
+                        <li>Fogón y zona de camping</li>
+                    </ul>
+                </div>
+
+                <div class="campo-feature-card">
+                    <div class="campo-feature-icon">🌳</div>
+                    <h3 class="campo-feature-title">Entorno Natural</h3>
+                    <p class="campo-feature-description">150 hectáreas de campo preservado con bosque nativo, pastizales y acceso directo al río Uruguay.</p>
+                    <ul class="campo-feature-list">
+                        <li>Senderos para caminatas</li>
+                        <li>Observación de fauna autóctona</li>
+                        <li>Pesca deportiva en el río</li>
+                        <li>Espacios para avistaje de aves</li>
+                    </ul>
+                </div>
+
+                <div class="campo-feature-card">
+                    <div class="campo-feature-icon">🔧</div>
+                    <h3 class="campo-feature-title">Servicios & Equipamiento</h3>
+                    <p class="campo-feature-description">Todas las comodidades modernas para garantizar una estadía confortable y sin preocupaciones.</p>
+                    <ul class="campo-feature-list">
+                        <li>Wi-Fi de alta velocidad</li>
+                        <li>Generador eléctrico de respaldo</li>
+                        <li>Sistema de seguridad perimetral</li>
+                        <li>Servicio de limpieza y mantenimiento</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Actividades -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Actividades & Experiencias</h2>
+            <p class="section-subtitle">
+                Disfrute de múltiples opciones para aprovechar al máximo su estadía en el campo
+            </p>
+        </div>
+
+        <div class="activities-grid">
+            <div class="activity-item">
+                <h4>🎣 Pesca Deportiva</h4>
+                <p>Acceso directo al río Uruguay para pesca de surubí, dorado, boga y otras especies. Equipamiento disponible bajo pedido.</p>
+            </div>
+
+            <div class="activity-item">
+                <h4>🚣 Deportes Acuáticos</h4>
+                <p>Kayak, paddle surf y natación en aguas calmas. Equipo de seguridad incluido.</p>
+            </div>
+
+            <div class="activity-item">
+                <h4>🚴 Ciclismo & Trekking</h4>
+                <p>Recorra los senderos del campo y descubra rincones únicos. Bicicletas disponibles.</p>
+            </div>
+
+            <div class="activity-item">
+                <h4>🐴 Cabalgatas</h4>
+                <p>Paseos a caballo por el campo bajo pedido previo. Experiencia guiada por baqueanos locales.</p>
+            </div>
+
+            <div class="activity-item">
+                <h4>🦅 Observación de Aves</h4>
+                <p>El campo alberga más de 80 especies de aves. Ideal para avistaje y fotografía de naturaleza.</p>
+            </div>
+
+            <div class="activity-item">
+                <h4>🔥 Asados & Fogones</h4>
+                <p>Quincho equipado con parrilla profesional. Fogón nocturno bajo las estrellas.</p>
+            </div>
+
+            <div class="activity-item">
+                <h4>🌅 Atardeceres en el Río</h4>
+                <p>Disfrute de puestas de sol únicas desde nuestro muelle privado con vista panorámica.</p>
+            </div>
+
+            <div class="activity-item">
+                <h4>📚 Retiros & Desconexión</h4>
+                <p>El lugar perfecto para retiros de trabajo, meditación o simplemente descansar sin interrupciones.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tipos de Eventos -->
+    <section class="content-section" style="background: var(--bg-primary); padding: 80px 20px; margin: 0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div class="section-header">
+                <h2 class="section-title">Eventos Privados</h2>
+                <p class="section-subtitle">
+                    Un espacio único para celebraciones íntimas y eventos especiales
+                </p>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card">
+                    <h3>🎊 Reuniones Familiares</h3>
+                    <p>Alquiler completo de la casa para reuniones, cumpleaños, aniversarios y celebraciones familiares en un entorno privado y natural.</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>💼 Retiros Corporativos</h3>
+                    <p>Espacio ideal para team building, reuniones estratégicas y retiros de empresa. Conectividad asegurada y espacios de trabajo.</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>💑 Bodas Íntimas</h3>
+                    <p>Ceremonia y celebración en un marco natural único. Capacidad para hasta 50 invitados en espacios al aire libre.</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>🧘 Retiros Wellness</h3>
+                    <p>Yoga, meditación y conexión con la naturaleza. El entorno perfecto para retiros de bienestar y desintoxicación digital.</p>
+                </div>
+            </div>
+
+            <!-- Servicios para Eventos -->
+            <div class="info-box" style="margin-top: 50px;">
+                <h3>Servicios Adicionales para Eventos</h3>
+                <div class="services-list">
+                    <div class="service-item-inline">
+                        <span class="service-check">✓</span>
+                        <span>Servicio de catering personalizado</span>
+                    </div>
+                    <div class="service-item-inline">
+                        <span class="service-check">✓</span>
+                        <span>Personal de apoyo y limpieza</span>
+                    </div>
+                    <div class="service-item-inline">
+                        <span class="service-check">✓</span>
+                        <span>Decoración y ambientación</span>
+                    </div>
+                    <div class="service-item-inline">
+                        <span class="service-check">✓</span>
+                        <span>Equipamiento audiovisual</span>
+                    </div>
+                    <div class="service-item-inline">
+                        <span class="service-check">✓</span>
+                        <span>Coordinación general del evento</span>
+                    </div>
+                    <div class="service-item-inline">
+                        <span class="service-check">✓</span>
+                        <span>Transporte desde/hacia aeropuerto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalidades de Alquiler -->
+    <section class="content-section">
+        <div class="section-header">
+            <h2 class="section-title">Modalidades de Alquiler</h2>
+            <p class="section-subtitle">
+                Opciones flexibles para adaptarse a sus necesidades
+            </p>
+        </div>
+
+        <div class="rental-options">
+            <div class="rental-card">
+                <div class="rental-icon">📅</div>
+                <h3>Fin de Semana</h3>
+                <p class="rental-description">Viernes a domingo. Ideal para escapadas cortas y desconexión del trabajo.</p>
+                <p class="rental-detail">Check-in: Viernes 15:00 hs<br>Check-out: Domingo 18:00 hs</p>
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-icon">🗓️</div>
+                <h3>Semanal</h3>
+                <p class="rental-description">Alquiler de lunes a domingo. Perfecto para vacaciones familiares extendidas.</p>
+                <p class="rental-detail">Mínimo 7 días<br>Tarifa especial</p>
+            </div>
+
+            <div class="rental-card">
+                <div class="rental-icon">🎯</div>
+                <h3>Por Evento</h3>
+                <p class="rental-description">Alquiler por día para eventos especiales. Consulte disponibilidad y servicios adicionales.</p>
+                <p class="rental-detail">Capacidad: hasta 50 personas<br>Servicio personalizado</p>
+            </div>
+        </div>
+
+        <div class="info-box" style="margin-top: 50px;">
+            <h3>⚠️ Información Importante</h3>
+            <ul class="info-list">
+                <li>Alquiler completo de la propiedad - No se alquilan habitaciones individuales</li>
+                <li>Depósito de seguridad requerido</li>
+                <li>Capacidad máxima: 20 personas alojadas</li>
+                <li>No se permiten eventos masivos sin autorización previa</li>
+                <li>Respeto por el entorno natural y fauna local</li>
+                <li>Consulte disponibilidad con anticipación, especialmente en temporada alta</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <h2 class="section-title">Reserve Su Experiencia en el Campo</h2>
+        <p class="section-subtitle" style="margin-bottom: 30px;">
+            Contáctenos para consultar disponibilidad y tarifas personalizadas
+        </p>
+        <a href="tel:+5493446621925" class="cta-button">Llamar Ahora</a>
+        <a href="https://wa.me/5493446621925" class="cta-button" style="margin-left: 20px; background: #25D366;">WhatsApp</a>
+    </section>
+
+    <footer class="footer">
+        <p>RUTA NACIONAL N° 14 km 55 · ENTRE RÍOS · ARGENTINA</p>
+        <p style="margin-top: 10px; font-size: 0.65rem;">Tel: +54 9 3446 621925</p>
+    </footer>
+
+    <script>
+        // Gallery toggle functionality
+        function toggleGallery(galleryId) {
+            const gallery = document.getElementById('gallery-' + galleryId);
+            const hiddenItems = gallery.querySelectorAll('.gallery-hidden');
+            const button = event.currentTarget;
+            const moreText = button.querySelector('.btn-text-more');
+            const lessText = button.querySelector('.btn-text-less');
+            
+            hiddenItems.forEach(item => {
+                if (item.style.display === 'block') {
+                    item.style.display = 'none';
+                    moreText.style.display = 'inline';
+                    lessText.style.display = 'none';
+                } else {
+                    item.style.display = 'block';
+                    moreText.style.display = 'none';
+                    lessText.style.display = 'inline';
+                }
+            });
+        }
+
+        // Image modal functionality
+        let currentImages = [];
+        let currentIndex = 0;
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item img');
+            
+            galleryItems.forEach((img, index) => {
+                img.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    openModal(this, index);
+                });
+            });
+        });
+
+        function openModal(img, index) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const caption = document.getElementById('modalCaption');
+            
+            // Get all visible images from the same gallery
+            const gallery = img.closest('.photo-gallery-dense');
+            currentImages = Array.from(gallery.querySelectorAll('.gallery-item:not(.gallery-hidden) img, .gallery-item[style*="display: block"] img'));
+            currentIndex = currentImages.indexOf(img);
+            
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+            caption.textContent = img.alt;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function navigateImage(direction) {
+            currentIndex += direction;
+            
+            if (currentIndex < 0) {
+                currentIndex = currentImages.length - 1;
+            } else if (currentIndex >= currentImages.length) {
+                currentIndex = 0;
+            }
+            
+            const modalImg = document.getElementById('modalImage');
+            const caption = document.getElementById('modalCaption');
+            
+            modalImg.src = currentImages[currentIndex].src;
+            caption.textContent = currentImages[currentIndex].alt;
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            } else if (e.key === 'ArrowLeft') {
+                navigateImage(-1);
+            } else if (e.key === 'ArrowRight') {
+                navigateImage(1);
+            }
+        });
+    </script>
+
+</body>
+</html>
