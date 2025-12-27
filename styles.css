@@ -1038,6 +1038,33 @@ body {
     right: 30px;
 }
 
+.btn-whatsapp {
+    position: fixed;
+    width: 48px;  /* Tamaño reducido */
+    height: 48px; /* Tamaño reducido */
+    bottom: 15px; /* Un poco más cerca del borde */
+    right: 15px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50%; /* Círculo perfecto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp img {
+    width: 28px; /* El logo también se achica */
+    height: 28px;
+}
+
+/* Efecto sutil al tocarlo */
+.btn-whatsapp:active {
+    transform: scale(0.9);
+}
+
 @media (max-width: 768px) {
     .modal-close {
         top: 15px;
@@ -1063,6 +1090,8 @@ body {
         font-size: 0.85rem;
         padding: 10px 20px;
     }
+
+
 }
 
 /* ================================
