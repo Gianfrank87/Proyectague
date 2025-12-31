@@ -1060,6 +1060,38 @@ body {
     height: 28px;
 }
 
+/* Estilos para el botón de llamada */
+.btn-phone-float {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  bottom: 80px; 
+  right: 15px;
+  background-color: #007bff; /* Color azul */
+  color: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse (opcional) */
+.btn-phone-float:hover {
+  transform: scale(1.1);
+  background-color: #0056b3;
+}
+
+/* OCULTAR EN COMPUTADORAS */
+/* Solo se mostrará en pantallas menores a 768px */
+@media only screen and (min-width: 768px) {
+  .btn-phone-float {
+    display: none;
+  }
+}
+
 /* Efecto sutil al tocarlo */
 .btn-whatsapp:active {
     transform: scale(0.9);
