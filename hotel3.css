@@ -1,0 +1,348 @@
+/* ================================
+   1. VARIABLES & CONFIGURACIÓN
+   ================================ */
+:root {
+    /* Paleta de Colores "Litoral Premium" */
+    --primary: #2C5F2D;      /* Verde Bosque Profundo */
+    --primary-dark: #1A3C1B;
+    --accent: #D4A373;       /* Dorado Madera/Arena */
+    --accent-hover: #C6925D;
+    
+    --text-dark: #2D3436;    /* Gris Carbón para texto */
+    --text-light: #636e72;   /* Gris suave */
+    --bg-body: #FAFAF5;      /* Blanco Hueso */
+    --bg-white: #FFFFFF;
+    
+    /* Tipografías */
+    --font-heading: 'Playfair Display', serif; /* Elegante */
+    --font-body: 'Lato', sans-serif;           /* Legible */
+    
+    /* Sombras y Bordes */
+    --shadow-soft: 0 10px 40px rgba(0,0,0,0.06);
+    --shadow-card: 0 5px 15px rgba(0,0,0,0.05);
+    --radius: 8px;
+    
+    --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; color: var(--primary-dark); }
+a { text-decoration: none; transition: var(--transition); }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ================================
+   2. NAVEGACIÓN
+   ================================ */
+.navbar {
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+    padding: 20px 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+
+.logo {
+    color: #FFF; font-family: var(--font-heading); font-size: 1.8rem; font-weight: 700; letter-spacing: 2px;
+}
+
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a { color: rgba(255,255,255,0.9); font-weight: 400; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px; }
+.nav-links a:hover { color: var(--accent); }
+
+.nav-btn {
+    border: 1px solid #FFF; padding: 8px 20px; border-radius: 50px;
+}
+.nav-btn:hover { background: #FFF; color: var(--primary-dark) !important; }
+
+.menu-toggle { display: none; color: #FFF; font-size: 1.5rem; cursor: pointer; }
+
+/* ================================
+   3. HERO SECTION
+   ================================ */
+.hero-section {
+    height: 90vh;
+    min-height: 600px;
+    background: url('https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg') center/cover no-repeat fixed;
+    position: relative;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+}
+/* Fallback para imagen mientras no carga */
+.hero-section { background-color: #333; }
+
+.hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+
+.hero-content { position: relative; z-index: 2; color: #FFF; max-width: 800px; padding: 20px; }
+
+.hero-badge {
+    display: inline-block; background: var(--accent); color: #FFF;
+    padding: 5px 15px; border-radius: 50px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 4rem; line-height: 1.1; margin-bottom: 20px; color: #FFF; text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.hero-content p { font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9; font-weight: 300; }
+
+.btn { display: inline-block; padding: 14px 35px; border-radius: 50px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; cursor: pointer; }
+.btn-primary { background: var(--accent); color: #FFF; border: 1px solid var(--accent); }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212, 163, 115, 0.4); }
+.btn-outline { background: transparent; color: #FFF; border: 1px solid #FFF; margin-left: 10px; }
+.btn-outline:hover { background: #FFF; color: var(--primary-dark); }
+.mt-20 { margin-top: 30px; }
+
+/* Booking Bar Mockup */
+.booking-bar-mockup {
+    position: absolute; bottom: -40px; left: 50%; transform: translateX(-50%);
+    background: #FFF; padding: 20px 40px; border-radius: 8px;
+    box-shadow: var(--shadow-soft); display: flex; align-items: center; gap: 40px;
+    z-index: 10; width: 85%; max-width: 1000px;
+}
+.bb-item { display: flex; flex-direction: column; }
+.bb-label { font-size: 0.75rem; text-transform: uppercase; color: var(--text-light); font-weight: 700; letter-spacing: 1px; margin-bottom: 5px; }
+.bb-value { font-family: var(--font-heading); font-size: 1.1rem; color: var(--primary-dark); border-bottom: 1px solid #EEE; padding-bottom: 5px; min-width: 150px; }
+.bb-btn { background: var(--primary-dark); color: #FFF; padding: 15px 30px; border-radius: 4px; text-transform: uppercase; font-size: 0.8rem; font-weight: 700; margin-left: auto; }
+.bb-btn:hover { background: var(--primary); }
+
+/* ================================
+   4. ESTILOS GENERALES DE SECCIÓN
+   ================================ */
+section { padding: 100px 20px; }
+.bg-light { background: #FFF; }
+.bg-pattern { background-color: #F8F7F2; background-image: radial-gradient(#E0E0E0 1px, transparent 1px); background-size: 20px 20px; }
+
+.container { max-width: 1200px; margin: 0 auto; }
+.text-center { text-align: center; }
+
+.section-subtitle { display: block; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; margin-bottom: 10px; }
+.section-title { font-size: 2.8rem; color: var(--primary-dark); margin-bottom: 20px; }
+.section-desc { color: var(--text-light); max-width: 600px; margin: 0 auto 50px; }
+.divider-left { width: 60px; height: 3px; background: var(--accent); margin-bottom: 25px; }
+
+/* ================================
+   5. INTRODUCCIÓN
+   ================================ */
+.intro-section { padding-top: 140px; } /* Espacio para la booking bar */
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+
+.intro-text p { margin-bottom: 20px; font-size: 1.05rem; }
+.features-mini { display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap; }
+.f-mini { font-size: 0.9rem; font-weight: 700; color: var(--primary-dark); display: flex; align-items: center; gap: 8px; }
+.f-mini i { color: var(--accent); }
+
+.intro-image-group { position: relative; height: 500px; }
+.img-main { width: 80%; height: 90%; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow-soft); }
+.img-small { 
+    position: absolute; bottom: 0; right: 0; width: 50%; height: 50%; 
+    object-fit: cover; border-radius: var(--radius); border: 8px solid #FFF; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
+}
+
+/* ================================
+   6. HABITACIONES (CARDS MEJORADAS)
+   ================================ */
+.rooms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+
+.room-card {
+    background: #FFF; border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow-card); transition: var(--transition); border: 1px solid rgba(0,0,0,0.03);
+}
+.room-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-soft); }
+
+.featured { border: 2px solid var(--accent); position: relative; transform: scale(1.02); }
+.badge-featured {
+    position: absolute; top: 15px; right: 15px; background: var(--accent); color: #FFF;
+    padding: 5px 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; border-radius: 4px; z-index: 10;
+}
+
+.room-img-container { position: relative; height: 250px; overflow: hidden; }
+.room-img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.room-card:hover .room-img-container img { transform: scale(1.1); }
+
+.room-overlay {
+    position: absolute; inset: 0; background: rgba(44, 95, 45, 0.7);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: var(--transition);
+}
+.room-card:hover .room-overlay { opacity: 1; }
+.btn-overlay { color: #FFF; border: 1px solid #FFF; padding: 10px 25px; text-transform: uppercase; letter-spacing: 1px; font-size: 0.8rem; }
+.btn-overlay:hover { background: #FFF; color: var(--primary); }
+
+.room-body { padding: 30px; }
+.room-body h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.room-body p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 20px; }
+
+.room-amenities { display: flex; justify-content: space-between; border-top: 1px solid #EEE; padding-top: 15px; font-size: 0.85rem; color: var(--primary-dark); font-weight: 700; }
+.room-amenities li i { color: var(--accent); margin-right: 5px; }
+
+/* ================================
+   7. GASTRONOMÍA (NUEVO)
+   ================================ */
+.dining-section { background: #FFF; }
+.dining-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px; align-items: center; }
+
+.dining-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 15px; color: var(--text-dark); font-size: 1.05rem; }
+.dining-list i { color: var(--accent); font-size: 1.2rem; }
+
+.dining-gallery {
+    display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 200px); gap: 15px;
+}
+.d-img { overflow: hidden; border-radius: var(--radius); }
+.d-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+.d-img:hover img { transform: scale(1.05); }
+
+.d-img-1 { grid-column: 1 / 2; grid-row: 1 / 3; height: 100%; } /* Foto alta izquierda */
+.d-img-2 { grid-column: 2 / 3; grid-row: 1 / 2; }
+.d-img-3 { grid-column: 2 / 3; grid-row: 2 / 3; }
+
+/* ================================
+   8. SERVICIOS (MODERNO)
+   ================================ */
+.amenities-grid-modern { 
+    display: grid; 
+    /* En móvil: 1 sola columna */
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+}
+
+.amenity-box {
+    background: #FFF; 
+    padding: 30px 20px; 
+    text-align: center;
+    border-radius: var(--radius); 
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    /* Para asegurar que todos tengan la misma altura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.amenity-box:hover { 
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow-soft); 
+}
+
+.icon-feature { 
+    font-size: 2.5rem; 
+    color: var(--accent); 
+    margin-bottom: 20px; 
+}
+
+.amenity-box h3 { 
+    font-size: 1.1rem; 
+    margin-bottom: 10px; 
+    color: var(--primary-dark);
+}
+
+.amenity-box p { 
+    font-size: 0.9rem; 
+    color: var(--text-light); 
+}
+
+/* --- AJUSTE PARA DESKTOP --- */
+@media (min-width: 1024px) {
+    .amenities-grid-modern { 
+        /* Forzamos 3 columnas exactas para que 6 elementos queden en 2 filas de 3 */
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 30px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+}
+
+/* ================================
+   9. UBICACIÓN & ATRACCIONES
+   ================================ */
+.location-section { display: flex; flex-wrap: wrap; background: #2D3436; color: #FFF; }
+.location-content { flex: 1; padding: 80px 50px; min-width: 400px; }
+.location-map { flex: 1; min-width: 400px; min-height: 400px; }
+
+.loc-text h2 { color: #FFF; margin-bottom: 20px; }
+.loc-text p { margin-bottom: 40px; font-size: 1.1rem; color: #CCC; }
+
+.attractions-visual-list { margin-top: 40px; }
+.attractions-visual-list h3 { color: var(--accent); font-size: 1rem; margin-bottom: 20px; text-transform: uppercase; }
+
+.att-card {
+    display: block; width: 100%; height: 80px; margin-bottom: 15px;
+    background-size: cover; background-position: center;
+    border-radius: 6px; display: flex; align-items: center; padding-left: 30px;
+    transition: 0.3s; border: 1px solid rgba(255,255,255,0.1);
+}
+.att-card:hover { transform: translateX(10px); border-color: var(--accent); }
+.att-card span { font-family: var(--font-heading); font-size: 1.3rem; color: #FFF; font-weight: 700; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+.att-card i { color: var(--accent); margin-right: 10px; }
+
+/* ================================
+   10. FOOTER & CTA
+   ================================ */
+.footer-cta {
+    position: relative; background: url('fotos\ hotel/taguecarteleria2.jpeg') center/cover fixed;
+    text-align: center; color: #FFF; padding: 120px 20px 40px;
+}
+.cta-overlay { position: absolute; inset: 0; background: rgba(26, 60, 27, 0.9); } /* Capa verde oscura */
+.cta-container { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
+
+.cta-container h2 { color: #FFF; font-size: 3rem; margin-bottom: 20px; }
+.cta-container p { font-size: 1.2rem; opacity: 0.8; margin-bottom: 50px; }
+
+.contact-grid { display: flex; justify-content: center; gap: 40px; margin-bottom: 50px; flex-wrap: wrap; }
+.c-item { display: flex; flex-direction: column; align-items: center; font-size: 1.1rem; }
+.c-item i { font-size: 1.5rem; color: var(--accent); margin-bottom: 10px; }
+
+.footer-buttons { display: flex; gap: 20px; justify-content: center; margin-bottom: 80px; flex-wrap: wrap; }
+.btn-whatsapp-solid { background: #25D366; color: #FFF; border: none; }
+.btn-whatsapp-solid:hover { background: #1ebe57; color: #FFF; }
+
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; color: #AAA; font-size: 0.9rem; }
+.socials a { color: #FFF; font-size: 1.2rem; margin-left: 20px; }
+
+/* Botones flotantes */
+.float-btn {
+    position: fixed; right: 25px; width: 60px; height: 60px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 28px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 999; transition: transform 0.3s;
+}
+.float-btn:hover { transform: scale(1.1); }
+.whatsapp-float { bottom: 30px; background: #25D366; }
+.phone-float { bottom: 105px; background: var(--primary-dark); font-size: 24px; }
+
+/* ================================
+   11. RESPONSIVE
+   ================================ */
+@media (max-width: 968px) {
+    .booking-bar-mockup { position: relative; bottom: 0; flex-direction: column; width: 100%; gap: 20px; align-items: stretch; margin-top: 40px; }
+    .bb-value { width: 100%; }
+    .bb-btn { width: 100%; text-align: center; }
+    .intro-grid, .dining-grid, .location-section { grid-template-columns: 1fr; display: block; }
+    .intro-image-group { margin-top: 40px; }
+    .dining-gallery { margin-top: 40px; }
+    .footer-bottom { flex-direction: column; gap: 20px; }
+    
+    .nav-links {
+        display: none; position: absolute; top: 100%; left: 0; width: 100%;
+        background: var(--primary-dark); flex-direction: column; padding: 20px;
+    }
+    .nav-links.active { display: flex; }
+    .menu-toggle { display: block; }
+    
+    .hero-content h1 { font-size: 2.8rem; }
+}

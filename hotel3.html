@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel El Tagüé | Tu Refugio en Gualeguaychú</title>
+    <link rel="stylesheet" href="hotel3.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar" id="mainNav">
+    <div class="nav-container">
+        <a href="#" class="logo">TAGÜÉ</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#habitaciones">Habitaciones</a></li>
+            <li><a href="#gastronomia">Gastronomía</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto" class="nav-btn">Reservar</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script src="hotel3.js"></script>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">TAGÜÉ</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#habitaciones">Habitaciones</a></li>
+                <li><a href="#gastronomia">Gastronomía</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto" class="nav-btn">Reservar</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Casi 40 años de trayectoria</span>
+            <h1>El Descanso que<br>su Viaje Merece</h1>
+            <p>Energía renovada, gastronomía casera y confort premium a la vera de la Ruta 14.</p>
+            
+            <div class="hero-actions">
+                <a href="#habitaciones" class="btn btn-primary">Ver Habitaciones</a>
+                <a href="#gastronomia" class="btn btn-outline">Nuestra Cocina</a>
+            </div>
+        </div>
+
+        <div class="booking-bar-mockup">
+            <div class="bb-item">
+                <span class="bb-label">Llegada</span>
+                <span class="bb-value">Seleccionar fecha</span>
+            </div>
+            <div class="bb-item">
+                <span class="bb-label">Salida</span>
+                <span class="bb-value">Seleccionar fecha</span>
+            </div>
+            <div class="bb-item">
+                <span class="bb-label">Huéspedes</span>
+                <span class="bb-value">2 Adultos</span>
+            </div>
+            <a href="https://wa.me/5493446621925" class="bb-btn">Consultar Disponibilidad</a>
+        </div>
+    </section>
+
+    <section class="intro-section">
+        <div class="container intro-grid">
+            <div class="intro-text">
+                <span class="section-subtitle">Bienvenidos a Gualeguaychú</span>
+                <h2 class="section-title">Su Refugio en el Litoral</h2>
+                <div class="divider-left"></div>
+                <p>
+                    Si necesita hacer un alto en su viaje, organizar visitas de trabajo o simplemente acercar destinos, 
+                    <strong>Tagüé Hotel</strong> es su elección inteligente.
+                </p>
+                <p>
+                    Contamos con <strong>130 plazas</strong> y 40 habitaciones donde la distinción se une a la sencillez. 
+                    Garantizamos su descanso con sommiers <strong>Simmons</strong>, climatización individual y la tranquilidad de un área protegida.
+                </p>
+                <div class="features-mini">
+                    <div class="f-mini"><i class="fa-solid fa-check"></i> Wi-Fi Alta Velocidad</div>
+                    <div class="f-mini"><i class="fa-solid fa-check"></i> Estacionamiento Techado</div>
+                    <div class="f-mini"><i class="fa-solid fa-check"></i> Recepción 24hs</div>
+                </div>
+            </div>
+            <div class="intro-image-group">
+                <img src="fotos hotel/fachada.png" alt="Hotel Fachada" class="img-main">
+                <img src="fotos hotel/pileta.jpeg" alt="Detalle Confort" class="img-small">
+            </div>
+        </div>
+    </section>
+
+    <section id="habitaciones" class="rooms-section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Confort & Calidad</span>
+                <h2 class="section-title">Nuestras Habitaciones</h2>
+                <p class="section-desc">Mismo confort, diferentes capacidades. Todas equipadas con TV LED 32", Climatización y Sommiers Simmons.</p>
+            </div>
+
+            <div class="rooms-grid">
+                <article class="room-card">
+                    <div class="room-img-container">
+                        <img src="fotos hotel/habitacion.png" alt="Habitación Single">
+                        <div class="room-overlay">
+                            <a href="https://wa.me/5493446621925?text=Hola,%20quisiera%20consultar%20por%20la%20habitacion%20Single" class="btn-overlay">Reservar</a>
+                        </div>
+                    </div>
+                    <div class="room-body">
+                        <h3>Base Single</h3>
+                        <p>Ideal para el viajero de negocios o escalas rápidas. Funcionalidad y descanso asegurado.</p>
+                        <ul class="room-amenities">
+                            <li><i class="fa-solid fa-user"></i> 1 Persona</li>
+                            <li><i class="fa-solid fa-bed"></i> Matrimonial</li>
+                            <li><i class="fa-solid fa-wifi"></i> Wi-Fi Gratis</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="room-card featured">
+                    <div class="badge-featured">Más Elegida</div>
+                    <div class="room-img-container">
+                        <img src="fotos hotel/habitacion.png" alt="Habitación Doble">
+                        <div class="room-overlay">
+                            <a href="https://wa.me/5493446621925?text=Hola,%20quisiera%20consultar%20por%20la%20habitacion%20Doble" class="btn-overlay">Reservar</a>
+                        </div>
+                    </div>
+                    <div class="room-body">
+                        <h3>Base Doble</h3>
+                        <p>Espacio amplio para parejas. La combinación perfecta de precio y confort superior.</p>
+                        <ul class="room-amenities">
+                            <li><i class="fa-solid fa-user-group"></i> 2 Personas</li>
+                            <li><i class="fa-solid fa-bed"></i> Twin / Matrim.</li>
+                            <li><i class="fa-solid fa-bath"></i> Baño Privado</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="room-card">
+                    <div class="room-img-container">
+                        <img src="fotos hotel/habitacion.png" alt="Habitación Triple">
+                        <div class="room-overlay">
+                            <a href="https://wa.me/5493446621925?text=Hola,%20quisiera%20consultar%20por%20la%20habitacion%20Triple" class="btn-overlay">Reservar</a>
+                        </div>
+                    </div>
+                    <div class="room-body">
+                        <h3>Base Triple</h3>
+                        <p>Comodidad para familias o grupos pequeños. Espacios luminosos y flexibles.</p>
+                        <ul class="room-amenities">
+                            <li><i class="fa-solid fa-users"></i> 3 Personas</li>
+                            <li><i class="fa-solid fa-bed"></i> Config. Flexible</li>
+                            <li><i class="fa-solid fa-tv"></i> TV LED 32"</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="gastronomia" class="dining-section">
+        <div class="container dining-grid">
+            <div class="dining-content">
+                <span class="section-subtitle">Sabores del Litoral</span>
+                <h2 class="section-title">Restaurante 24 Horas</h2>
+                <div class="divider-left"></div>
+                <p>En El Tagüé, la cocina nunca cierra. Disfrute de nuestro parador con gastronomía regional y un menú variado disponible en cualquier momento de su estadía.</p>
+                <ul class="dining-list">
+                    <li><i class="fa-solid fa-utensils"></i> Platos caseros y abundantes.</li>
+                    <li><i class="fa-solid fa-mug-hot"></i> Desayunos completos para iniciar el día.</li>
+                    <li><i class="fa-solid fa-clock"></i> Servicio continuo de cafetería y comidas.</li>
+                </ul>
+                <a href="#contacto" class="btn btn-primary mt-20">Ver Menú / Consultar</a>
+            </div>
+            <div class="dining-gallery">
+                <div class="d-img d-img-1"><img src="fotos hotel/desayuno.jpeg" alt="Café y Desayuno"></div>
+                <div class="d-img d-img-2"><img src="fotos hotel/desayuno2.jpeg" alt="Pizza casera"></div>
+                <div class="d-img d-img-3"><img src="fotos hotel/mesa desayuno.jpeg" alt="Platos regionales"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="amenities-section bg-pattern">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Experiencia Tagüé</h2>
+                <p class="section-desc">Todo lo necesario para resolver sus necesidades en ruta.</p>
+            </div>
+            
+            <div class="amenities-grid-modern">
+                <div class="amenity-box">
+                    <i class="fa-solid fa-water icon-feature"></i>
+                    <h3>Piscina & Solarium</h3>
+                    <p>Espacios verdes para disfrutar el aire libre.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-child-reaching icon-feature"></i>
+                    <h3>Juegos Infantiles</h3>
+                    <p>Diversión segura para los más chicos.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-car icon-feature"></i>
+                    <h3>Cocheras Techadas</h3>
+                    <p>Gratuitas y al lado de su habitación.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-shield-halved icon-feature"></i>
+                    <h3>Área Protegida</h3>
+                    <p>Cámaras de vigilancia y emergencia médica.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-spa icon-feature"></i>
+                    <h3>Convenio Termas</h3>
+                    <p>Descuentos exclusivos en Termas del Guaychú.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-wifi icon-feature"></i>
+                    <h3>Conectividad</h3>
+                    <p>Wi-Fi gratuito en todo el predio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="location-section">
+        <div class="location-content">
+            <div class="loc-text">
+                <span class="section-subtitle">Gualeguaychú, Entre Ríos</span>
+                <h2>Ubicación Estratégica</h2>
+                <p><i class="fa-solid fa-location-dot"></i> Ruta Nacional 14, Km 55 e intersección RP 16.</p>
+                
+                <div class="attractions-visual-list">
+                    <h3>Cerca del Hotel:</h3>
+                    <a href="https://maps.app.goo.gl/afxaGvk2rU7NhQKu5" target="_blank" class="att-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fotos\ cercanias/temas.jpg');">
+                        <span><i class="fa-solid fa-water"></i> Termas</span>
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Tagüé+Gualeguaychu&destination=Parque+Nacional+El+Palmar" target="_blank" class="att-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fotos\ cercanias/palmar.jpg');">
+                        <span><i class="fa-solid fa-tree"></i> Palmar</span>
+                    </a>
+                    <a href="https://www.google.com/maps/dir/?api=1&origin=Hotel+Tagüé+Gualeguaychu&destination=Corsódromo+de+Gualeguaychú" target="_blank" class="att-card" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fotos\ cercanias/carnaval.png');">
+                        <span><i class="fa-solid fa-mask"></i> Carnaval</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="location-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.501222738296!2d-58.623368623570926!3d-33.04326877677655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95baa82f7036ff21%3A0x92cca64ac3fdedab!2sParador%20%26%20Hotel%20El%20Tag%C3%BCe!5e0!3m2!1ses-419!2sar!4v1768588500564!5m2!1ses-419!2sar" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section id="contacto" class="footer-cta">
+        <div class="cta-overlay"></div>
+        <div class="cta-container">
+            <h2>¿Listo para reservar su estadía?</h2>
+            <p>La mejor tarifa garantizada contactando directamente con nosotros. Recepción las 24 horas.</p>
+            
+            <div class="contact-grid">
+                <div class="c-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+54 9 3446 493085</span>
+                </div>
+                <div class="c-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>+54 9 3446 621925</span>
+                </div>
+                <div class="c-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>reservashoteltague@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="footer-buttons">
+                <a href="https://wa.me/5493446621925" class="btn btn-whatsapp-solid">Enviar WhatsApp</a>
+                <a href="tel:+5493446493085" class="btn btn-primary">Llamar Ahora</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Hotel Parador El Tagüé. Todos los derechos reservados.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="tel:+5493446493085" class="float-btn phone-float" title="Llamar">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="https://wa.me/5493446621925" class="float-btn whatsapp-float" target="_blank" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+:root {
+    --bg-primary: #FAF9F6;
+    --bg-secondary: #FFFFFF;
+    --bg-pattern: #F2EFE9;
+    --accent: #8D6E63;
+    --accent-dark: #5D4037;
+    --text-main: #2C3E50;
+    --text-muted: #607D8B;
+    --border: #E0E0E0;
+    --shadow-md: 0 8px 24px rgba(93, 64, 55, 0.1);
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: var(--font-body); background-color: var(--bg-primary); color: var(--text-main); line-height: 1.6; }
+
+/* HEADER */
+.header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border); }
+.main-logo { height: 50px; }
+.logo-container { display: flex; align-items: center; gap: 15px; }
+.divider { width: 1px; height: 30px; background: var(--border); }
+.tagline { font-size: 0.85rem; color: var(--text-muted); }
+.nav-links a { text-decoration: none; color: var(--accent-dark); font-weight: 600; }
+
+/* HERO */
+.hero-section { position: relative; height: 45vh; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+.hero-content { position: relative; z-index: 2; padding: 0 20px; }
+.hero-content h1 { font-family: var(--font-heading); font-size: 2.8rem; margin: 10px 0; }
+.hero-divider { width: 60px; height: 3px; background: var(--accent); margin: 15px auto; }
+
+/* CONTENIDOS */
+.content-section { padding: 60px 10%; max-width: 1200px; margin: 0 auto; }
+.section-header { text-align: center; margin-bottom: 40px; }
+.section-title { font-family: var(--font-heading); color: var(--accent-dark); font-size: 2.2rem; }
+.bg-pattern { background-color: var(--bg-pattern); }
+
+/* HABITACIONES */
+.room-card { display: grid; grid-template-columns: 1fr 1fr; background: white; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md); }
+.room-image-wrapper img { width: 100%; height: 100%; object-fit: cover; }
+.room-info { padding: 40px; }
+.room-amenities-icons { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 25px; border-top: 1px solid var(--border); padding-top: 20px; }
+.ami { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-muted); }
+.ami i { color: var(--accent); }
+
+/* ICONOS SERVICIOS */
+.icon-menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.icon-item { background: white; padding: 30px; border-radius: 12px; text-align: center; transition: 0.3s; border: 1px solid transparent; }
+.icon-item:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--accent); }
+.icon-item i { font-size: 2.5rem; color: var(--accent); margin-bottom: 15px; }
+.icon-item h4 { font-family: var(--font-heading); margin-bottom: 10px; }
+
+/* MAPA INTERACTIVO */
+.location-container { display: grid; grid-template-columns: 1fr 1.5fr; gap: 30px; }
+.info-card { background: white; padding: 30px; border-radius: 15px; box-shadow: var(--shadow-md); }
+.dist-list { list-style: none; margin-top: 20px; }
+
+.map-trigger { 
+    display: flex; justify-content: space-between; text-decoration: none; color: var(--text-main); 
+    padding: 15px; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px; transition: 0.3s; 
+}
+.map-trigger:hover, .map-trigger.active { 
+    background: var(--accent-dark); color: white; border-color: var(--accent-dark); transform: translateX(5px);
+}
+.place { font-weight: 600; }
+.dist { font-weight: 700; color: var(--accent); }
+.map-trigger:hover .dist, .map-trigger.active .dist { color: white; }
+
+.map-frame { border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-md); height: 100%; min-height: 450px; background: #eee; }
+#main-map { transition: opacity 0.3s ease; }
+
+/* BOTONES FLOTANTES */
+.btn-float { position: fixed; right: 20px; width: 60px; height: 60px; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; z-index: 1000; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s; }
+.whatsapp-float { bottom: 20px; background: #25D366; }
+.phone-float { bottom: 90px; background: var(--accent-dark); }
+.btn-float:hover { transform: scale(1.1); }
+
+/* FOOTER */
+.footer { background: #1a1a1a; color: white; padding: 40px; text-align: center; }
+.footer-logo { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 10px; }
+
+@media (max-width: 900px) {
+    .room-card, .location-container { grid-template-columns: 1fr; }
+    .hero-content h1 { font-size: 2rem; }
+    .content-section { padding: 40px 5%; }
+}

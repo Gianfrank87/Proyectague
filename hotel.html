@@ -3,248 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel - El Tague</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Hotel El Tagüé | Descanso y Confort</title>
+    <link rel="stylesheet" href="hotel.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <header class="header">
         <div class="logo-container">
-            <img src="tague2.svg" class="main-logo">        
+            <img src="tague2.svg" alt="El Tagüé Logo" class="main-logo">        
             <div class="divider"></div>
             <p class="tagline">Exclusividad & Descanso en Ruta 14, Gualeguaychú</p>
         </div>
-        <a href="index.html" class="back-link">← Volver al Inicio</a>
+        <nav class="nav-links">
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Volver al Inicio</a>
+        </nav>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero-section" style="background-image: url('https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg');">
         <div class="hero-overlay"></div>
         <div class="hero-content">
+            <span class="hero-subtitle">Bienvenido a</span>
             <h1>Hotel Tagüé</h1>
-            <p>Confort de primera categoría y vistas panorámicas. Una estadía diseñada para el relax total.</p>
+            <div class="hero-divider"></div>
+            <p>Casi 40 años de experiencia nos avalan para brindar la mejor asistencia. Sobre la ruta nacional 14
+encontrarás PARADOR & HOTEL EL TAGÜÉ, un complejo de servicios a la vera de la ruta, disponible para
+brindarle un alto a su viaje; para recargar energía, descansar y disfrutar de nuestra variada gastronomía
+de elaboración propia.
+</p>
+            <a href="#habitaciones" class="hero-btn">Ver Habitaciones</a>
         </div>
     </section>
 
-    <!-- Descripción Principal -->
-    <section class="content-section">
+    <section class="content-section intro-section">
         <div class="section-header">
-            <h2 class="section-title">Su Mejor Opción de Descanso</h2>
+            <h2 class="section-title">Su Refugio en el Litoral</h2>
             <p class="section-subtitle">
-                El Hotel Tagüé cuenta con 40 habitaciones decoradas con distinción y sencillez, ideales para el descanso. 
-                Si necesita hacer un alto en su viaje, organizar sus visitas de trabajo en la zona o simplemente acercar destinos, 
-                no deje de visitarnos.
-            </p>
-        </div>
-
-        <!-- Info Box Check-in/out -->
-        <div class="info-box">
-            <h3>Información de Estadía</h3>
-            <div class="info-grid">
-                <div class="info-item">
-                    <div class="info-label">Check-in</div>
-                    <div class="info-value">13:00 hs</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">Check-out</div>
-                    <div class="info-value">10:00 hs</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">Ubicación</div>
-                    <div class="info-value">Ruta Nacional 14, Km 55</div>
-                </div>
-                <div class="info-item">
-                    <div class="info-label">Distancia</div>
-                    <div class="info-value">12 km de Gualeguaychú</div>
-                </div>
-            </div>
-            <p style="margin-top: 20px; color: var(--text-light); font-size: 0.9rem;">
-                *Puede contratar salida late check-out según disponibilidad
+                Tagüé Hotel cuenta con 130 plazas distribuidas en habitaciones singles, dobles y triples,
+preparadas para brindarle confort y buen descanso. Todas ellas disponen de baños privados y
+escritorio.
             </p>
         </div>
     </section>
 
-    <!-- Habitaciones -->
-    <section class="content-section" style="background: var(--bg-primary); padding: 80px 20px; margin: 0;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div class="section-header">
-                <h2 class="section-title">Nuestras Habitaciones</h2>
-                <p class="section-subtitle">
-                    Todas nuestras habitaciones están equipadas para brindarle el máximo confort durante su estadía
-                </p>
-            </div>
+    <section id="habitaciones" class="content-section bg-light">
+        <div class="section-header">
+            <h2 class="section-title">Nuestras Habitaciones</h2>
+            <p class="section-subtitle">Espacios diseñados para garantizar su descanso absoluto</p>
+        </div>
 
-            <div class="rooms-grid">
-                <!-- Habitación Individual -->
-                <div class="room-card">
+        <div class="rooms-grid">
+            <div class="room-card">
+                <div class="room-image-wrapper">
                     <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg" alt="Habitación Individual" class="room-image">
-                    <div class="room-info">
-                        <h3 class="room-type">Habitación Individual</h3>
-                        <p class="room-description">Perfecta para viajeros de negocios o turistas que buscan comodidad y privacidad.</p>
-                        <ul class="room-features">
-                            <li>Sommier King Size SIMMONS</li>
-                            <li>Escritorio de trabajo</li>
-                            <li>Baño privado completo</li>
-                        </ul>
-                    </div>
+                    <div class="room-badge"><i class="fa-solid fa-user"></i> 1 Pasajero</div>
                 </div>
-
-                <!-- Habitación Doble -->
-                <div class="room-card">
-                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto027.jpg" alt="Habitación Doble" class="room-image">
-                    <div class="room-info">
-                        <h3 class="room-type">Habitación Doble</h3>
-                        <p class="room-description">Ideal para parejas que buscan un espacio confortable y acogedor.</p>
-                        <ul class="room-features">
-                            <li>Cama matrimonial King Size</li>
-                            <li>Espacio amplio</li>
-                            <li>Vista al parque</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Habitación Triple -->
-                <div class="room-card">
-                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg" alt="Habitación Triple" class="room-image">
-                    <div class="room-info">
-                        <h3 class="room-type">Habitación Triple</h3>
-                        <p class="room-description">Perfecta para grupos pequeños o familias que viajan juntas.</p>
-                        <ul class="room-features">
-                            <li>Capacidad para 3 personas</li>
-                            <li>Camas confortables</li>
-                            <li>Espacio optimizado</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Habitación Cuádruple -->
-                <div class="room-card">
-                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto027.jpg" alt="Habitación Cuádruple" class="room-image">
-                    <div class="room-info">
-                        <h3 class="room-type">Habitación Cuádruple</h3>
-                        <p class="room-description">Especialmente diseñada para familias que buscan estar juntas.</p>
-                        <ul class="room-features">
-                            <li>Capacidad para 4 personas</li>
-                            <li>Ambiente familiar</li>
-                            <li>Máxima comodidad</li>
-                        </ul>
-                    </div>
+                <div class="room-info">
+                    <h3 class="room-type">Single Executive</h3>
+                    <p class="room-description">Privacidad y confort para el viajero exigente. Ideal para escalas de negocios.</p>
+                    <ul class="room-features">
+                        <li><i class="fa-solid fa-bed"></i> Colch[on y sommier SIMMONS</li>
+                        <li><i class="fa-solid fa-laptop"></i> Escritorio de trabajo</li>
+                        <li><i class="fa-solid fa-bath"></i> Baño privado</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Características Comunes -->
-            <div class="info-box" style="margin-top: 60px;">
-                <h3>Todas las Habitaciones Incluyen</h3>
-                <div class="rooms-grid" style="margin-top: 30px;">
+            <div class="room-card">
+                <div class="room-image-wrapper">
+                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto027.jpg" alt="Habitación Doble" class="room-image">
+                    <div class="room-badge"><i class="fa-solid fa-user-group"></i> 2 Pasajeros</div>
+                </div>
+                <div class="room-info">
+                    <h3 class="room-type">Doble Superior</h3>
+                    <p class="room-description">Un espacio amplio y luminoso, perfecto para disfrutar en pareja con vistas al parque.</p>
                     <ul class="room-features">
-                        <li>LED TV 32"</li>
-                        <li>Aire Acondicionado / Calefacción</li>
-                        <li>Wi-Fi de Alta Velocidad</li>
-                        <li>Desayuno Incluido</li>
-                    </ul>
-                    <ul class="room-features">
-                        <li>Sommier King Size</li>
-                        <li>Secador de Pelo</li>
-                        <li>Frigobar</li>
-                        <li>Escritorio</li>
-                    </ul>
-                    <ul class="room-features">
-                        <li>Baño Privado</li>
-                        <li>Artículos de Tocador</li>
-                        <li>Servicio de Limpieza Diario</li>
-                        <li>Ropa de Cama Premium</li>
+                        <li><i class="fa-solid fa-bed"></i> Cama King Size</li>
+                        <li><i class="fa-solid fa-wind"></i> Aire Acondicionado</li>
+                        <li><i class="fa-solid fa-tree"></i> Vista al parque</li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-image-wrapper">
+                    <img src="https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg" alt="Habitación Triple" class="room-image">
+                    <div class="room-badge"><i class="fa-solid fa-users"></i> 3 Pasajeros</div>
+                </div>
+                <div class="room-info">
+                    <h3 class="room-type">Triple Family</h3>
+                    <p class="room-description">Comodidad y funcionalidad para grupos pequeños o familias.</p>
+                    <ul class="room-features">
+                        <li><i class="fa-solid fa-bed"></i> Camas individuales/dobles</li>
+                        <li><i class="fa-solid fa-wifi"></i> Wi-Fi Alta velocidad</li>
+                        <li><i class="fa-solid fa-tv"></i> LED TV 32"</li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="room-amenities-summary">
+            <h3>Comodidades Incluidas en su Estadía</h3>
+            <div class="summary-icons">
+                <div class="s-icon"><i class="fa-solid fa-wifi"></i> <span>Wi-Fi</span></div>
+                <div class="s-icon"><i class="fa-solid fa-tv"></i> <span>TV LED</span></div>
+                <div class="s-icon"><i class="fa-solid fa-wind"></i> <span>Climatización</span></div>
+                <div class="s-icon"><i class="fa-solid fa-soap"></i> <span>Amenities</span></div>
+                <div class="s-icon"><i class="fa-solid fa-mug-hot"></i> <span>Desayuno</span></div>
             </div>
         </div>
     </section>
 
-    <!-- Servicios e Instalaciones -->
     <section class="content-section">
         <div class="section-header">
-            <h2 class="section-title">Servicios e Instalaciones</h2>
-            <p class="section-subtitle">
-                Todo lo que necesita para una estadía perfecta en un solo lugar
-            </p>
+            <h2 class="section-title">Experiencia Tagüé</h2>
+            <p class="section-subtitle">Instalaciones pensadas para su bienestar y entretenimiento</p>
         </div>
 
         <div class="amenities-grid">
             <div class="amenity-item">
-                <div class="amenity-icon">🍽️</div>
+                <div class="amenity-icon-box"><i class="fa-solid fa-utensils"></i></div>
                 <h3 class="amenity-title">Restaurante 24hs</h3>
-                <p class="amenity-description">Parador El Tagüé con todas las posibilidades gastronómicas</p>
+                <p class="amenity-description">Gastronomía regional en nuestro Parador exclusivo.</p>
             </div>
 
             <div class="amenity-item">
-                <div class="amenity-icon">🏊</div>
+                <div class="amenity-icon-box"><i class="fa-solid fa-water"></i></div>
                 <h3 class="amenity-title">Piscina & Solarium</h3>
-                <p class="amenity-description">Disfrute del sol y refrescarse en nuestra piscina exterior</p>
+                <p class="amenity-description">Relájese bajo el sol o refrésquese en nuestra piscina exterior.</p>
             </div>
 
             <div class="amenity-item">
-                <div class="amenity-icon">🧒</div>
-                <h3 class="amenity-title">Área Infantil</h3>
-                <p class="amenity-description">Juegos infantiles y piscina para niños</p>
+                <div class="amenity-icon-box"><i class="fa-solid fa-child-reaching"></i></div>
+                <h3 class="amenity-title">Espacio Kids</h3>
+                <p class="amenity-description">Juegos al aire libre y piscina segura para niños.</p>
             </div>
 
             <div class="amenity-item">
-                <div class="amenity-icon">🅿️</div>
+                <div class="amenity-icon-box"><i class="fa-solid fa-car"></i></div>
                 <h3 class="amenity-title">Estacionamiento</h3>
-                <p class="amenity-description">Amplio estacionamiento gratuito y vigilado</p>
+                <p class="amenity-description">Cocheras techadas, gratuitas y vigiladas.</p>
             </div>
 
             <div class="amenity-item">
-                <div class="amenity-icon">💆</div>
-                <h3 class="amenity-title">Termas del Guaychú</h3>
-                <p class="amenity-description">Convenio especial con las termas de la región</p>
+                <div class="amenity-icon-box"><i class="fa-solid fa-spa"></i></div>
+                <h3 class="amenity-title">Acceso a Termas</h3>
+                <p class="amenity-description">Convenios exclusivos con complejos termales locales.</p>
             </div>
 
             <div class="amenity-item">
-                <div class="amenity-icon">🔒</div>
-                <h3 class="amenity-title">Seguridad</h3>
-                <p class="amenity-description">Sistema de alarma, cámaras de vigilancia y cobertura médica</p>
+                <div class="amenity-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                <h3 class="amenity-title">Seguridad Total</h3>
+                <p class="amenity-description">Monitoreo 24hs y cobertura de emergencias médicas.</p>
             </div>
 
             <div class="amenity-item">
-                <div class="amenity-icon">📶</div>
-                <h3 class="amenity-title">Wi-Fi Gratis</h3>
-                <p class="amenity-description">Internet de alta velocidad en todas las instalaciones</p>
-            </div>
-
-            <div class="amenity-item">
-                <div class="amenity-icon">🛎️</div>
+                <div class="amenity-icon-box"><i class="fa-solid fa-bell-concierge"></i></div>
                 <h3 class="amenity-title">Recepción 24hs</h3>
-                <p class="amenity-description">Personal a su disposición las 24 horas del día</p>
+                <p class="amenity-description">Estamos disponibles para asistirle en todo momento.</p>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="cta-section">
-        <h2 class="section-title">Reserve su Estadía</h2>
-        <p class="section-subtitle" style="margin-bottom: 30px;">
-            Viva una experiencia única en el corazón del litoral argentino
-        </p>
-        <a href="tel:+5493446493085" class="cta-button">Llamar Ahora</a>
-        <a href="https://wa.me/5493446621925" class="cta-button" style="margin-left: 20px; background: #25D366;">WhatsApp</a>
+    <section class="info-section-split">
+        <div class="info-container">
+            <div class="info-card">
+                <h3><i class="fa-regular fa-clock"></i> Horarios</h3>
+                <div class="info-row">
+                    <span>Check-in</span>
+                    <strong>13:00 hs</strong>
+                </div>
+                <div class="info-row">
+                    <span>Check-out</span>
+                    <strong>10:00 hs</strong>
+                </div>
+                <p class="small-note">*Late check-out sujeto a disponibilidad.</p>
+            </div>
+
+            <div class="map-card">
+                <div class="map-header">
+                    <h3><i class="fa-solid fa-location-dot"></i> Nuestra Ubicación</h3>
+                    <p>Ruta Nacional 14, Km 55 · A solo 12km del centro de Gualeguaychú</p>
+                </div>
+                <div class="map-frame">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.6!2d-58.5!3d-33.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDAwJzAwLjAiUyA1OMKwMzAnMDAuMCJX!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="distances-mini">
+                    <span><i class="fa-solid fa-car-side"></i> Bs. As: 220km</span>
+                    <span><i class="fa-solid fa-bridge-water"></i> Uruguay: 40km</span>
+                </div>
+            </div>
+        </div>
     </section>
 
-        <a href="tel:+5491122334455" class="btn-phone-float" title="Llamar por teléfono">
-        <svg viewBox="0 0 24 24" width="30" height="30">
-        <path fill="currentColor" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
-        </svg>
-        </a>
-        <!-- WhatsApp Button -->
-        <a href="https://wa.me/5491123456789" class="btn-whatsapp" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
+    <section class="content-section bg-pattern">
+        <div class="section-header">
+            <h2 class="section-title">Descubra la Región</h2>
+            <p class="section-subtitle">Ubicación estratégica cerca de los principales atractivos turísticos</p>
+        </div>
+
+        <div class="attractions-grid">
+            <div class="attraction-group">
+                <h3 class="group-title"><i class="fa-solid fa-hot-tub-person"></i> Circuito Termal</h3>
+                <ul class="attraction-list">
+                    <li>
+                        <span class="place">Termas de Gualeguaychú</span>
+                        <span class="dist">15 min</span>
+                    </li>
+                    <li>
+                        <span class="place">Termas de Colón</span>
+                        <span class="dist">80 km</span>
+                    </li>
+                    <li>
+                        <span class="place">Termas Villa Elisa</span>
+                        <span class="dist">65 km</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="attraction-group">
+                <h3 class="group-title"><i class="fa-solid fa-tree"></i> Naturaleza & Paseos</h3>
+                <ul class="attraction-list">
+                    <li>
+                        <span class="place">Parque Nac. El Palmar</span>
+                        <span class="dist">60 km</span>
+                    </li>
+                    <li>
+                        <span class="place">Reserva Ñandubaysal</span>
+                        <span class="dist">45 km</span>
+                    </li>
+                    <li>
+                        <span class="place">Palacio San José</span>
+                        <span class="dist">50 km</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="attraction-group">
+                <h3 class="group-title"><i class="fa-solid fa-masks-theater"></i> Cultura & Ocio</h3>
+                <ul class="attraction-list">
+                    <li>
+                        <span class="place">Corsódromo (Carnaval)</span>
+                        <span class="dist">12 km</span>
+                    </li>
+                    <li>
+                        <span class="place">Centro de Gualeguaychú</span>
+                        <span class="dist">12 km</span>
+                    </li>
+                    <li>
+                        <span class="place">Puente Internacional</span>
+                        <span class="dist">40 km</span>
+                    </li>
+                </ul>
+            </div>
+             <div class="attraction-group">
+                <h3 class="group-title"><i class="fa-solid fa-wine-glass"></i> Bodegas</h3>
+                <ul class="attraction-list">
+                    <li>
+                        <span class="place">Bodega Ianni</span>
+                        <span class="dist">20 km</span>
+                    </li>
+                    <li>
+                        <span class="place">Las Magnolias</span>
+                        <span class="dist">18 km</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">¿Listo para su estadía?</h2>
+            <p>Reserve directamente con nosotros y obtenga la mejor tarifa.</p>
+            <div class="cta-buttons">
+                <a href="tel:+5493446493085" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Llamar Ahora</a>
+                <a href="https://wa.me/5493446621925" class="btn btn-whatsapp-solid"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <a href="tel:+5493446493085" class="btn-float phone-float" title="Llamar">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="https://wa.me/5493446621925" class="btn-float whatsapp-float" target="_blank" title="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <footer class="footer">
-        <p>RUTA NACIONAL N° 14 km 55 · ENTRE RÍOS · ARGENTINA</p>
-        <p style="margin-top: 10px; font-size: 0.65rem;">Tel: +54 9 3446 621925</p>
+        <div class="footer-logo">EL TAGÜÉ</div>
+        <p>RUTA NACIONAL Nº 14 km 55 · ENTRE RÍOS · ARGENTINA</p>
+        <p class="footer-contact"><i class="fa-solid fa-phone"></i> +54 9 3446 621925</p>
+        <div class="copyright">© 2024 Hotel Parador El Tagüé. Todos los derechos reservados.</div>
     </footer>
 
 </body>
