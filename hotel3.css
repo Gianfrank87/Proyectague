@@ -75,7 +75,7 @@ ul { list-style: none; }
 .hero-section {
     height: 90vh;
     min-height: 600px;
-    background: url('https://www.eltague.ar/wp-content/uploads/2015/08/foto002.jpg') center/cover no-repeat fixed;
+    background: url('fotos\ hotel/recepcion.jpg') center/cover no-repeat fixed;
     position: relative;
     display: flex; align-items: center; justify-content: center; text-align: center;
 }
@@ -295,7 +295,7 @@ section { padding: 100px 20px; }
    10. FOOTER & CTA
    ================================ */
 .footer-cta {
-    position: relative; background: url('fotos\ hotel/taguecarteleria2.jpeg') center/cover fixed;
+    position: relative; background: url('fotos\ hotel/pileta2.jpg') center/cover fixed;
     text-align: center; color: #FFF; padding: 120px 20px 40px;
 }
 .cta-overlay { position: absolute; inset: 0; background: rgba(26, 60, 27, 0.9); } /* Capa verde oscura */
