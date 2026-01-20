@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parador Tagüé | Horarios y Gastronomía</title>
+    <link rel="stylesheet" href="parador-v2.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar" id="mainNav">
+        <a href="index.html" class="logo">TAGÜÉ <span style="font-size: 0.5em; display:block; line-height:1;">PARADOR</span></a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Volver al Hotel</a></li>
+            <li><a href="#horarios">Horarios Bus</a></li>
+            <li><a href="#gastronomia">Gastronomía</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto" class="nav-btn">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">Km 55 - Ruta 14</span>
+            <h1>Terminal & Parador<br>El Tagüé</h1>
+            <p>Punto estratégico de conexión. Gastronomía regional y venta de pasajes las 24hs.</p>
+            <div class="hero-actions">
+                <a href="#horarios" class="btn btn-primary">Ver Horarios de Salida</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="horarios" class="schedules-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Terminal de Ómnibus</span>
+                <h2 class="section-title">Próximas Salidas</h2>
+                <p class="section-desc">Venta de pasajes oficial en boletería. Horarios sujetos a tráfico en ruta.</p>
+            </div>
+
+            <div class="schedules-grid">
+                
+                <div class="schedule-card">
+                    <div class="company-header header-flecha">
+                        <h3>Flecha Bus</h3>
+                        <span class="route-badge">Nacionales</span>
+                    </div>
+                    <ul class="departure-list">
+                        <li>
+                            <div class="dep-time">08:30</div>
+                            <div class="dep-info">
+                                <strong>Retiro (Bs. As.)</strong>
+                                <span>Cama / Semi-Cama</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">14:15</div>
+                            <div class="dep-info">
+                                <strong>Córdoba Capital</strong>
+                                <span>Directo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">19:45</div>
+                            <div class="dep-info">
+                                <strong>Paraná</strong>
+                                <span>Lechero</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">23:00</div>
+                            <div class="dep-info">
+                                <strong>Gualeguaychú (Centro)</strong>
+                                <span>Conexión</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="company-header header-crucero">
+                        <h3>Crucero del Norte</h3>
+                        <span class="route-badge">Litoral</span>
+                    </div>
+                    <ul class="departure-list">
+                        <li>
+                            <div class="dep-time">09:00</div>
+                            <div class="dep-info">
+                                <strong>Puerto Iguazú</strong>
+                                <span>Servicio Premium</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">13:30</div>
+                            <div class="dep-info">
+                                <strong>Posadas</strong>
+                                <span>Semi-Cama</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">20:15</div>
+                            <div class="dep-info">
+                                <strong>Buenos Aires</strong>
+                                <span>Directo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">01:45</div>
+                            <div class="dep-info">
+                                <strong>Corrientes</strong>
+                                <span>Escalas intermedias</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="company-header header-via">
+                        <h3>Vía Bariloche</h3>
+                        <span class="route-badge">Sur & Centro</span>
+                    </div>
+                    <ul class="departure-list">
+                        <li>
+                            <div class="dep-time">10:45</div>
+                            <div class="dep-info">
+                                <strong>Bariloche</strong>
+                                <span>Con Trasbordo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">16:00</div>
+                            <div class="dep-info">
+                                <strong>Neuquén</strong>
+                                <span>Cama Ejecutivo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">21:30</div>
+                            <div class="dep-info">
+                                <strong>Retiro (Bs. As.)</strong>
+                                <span>Express</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">23:50</div>
+                            <div class="dep-info">
+                                <strong>Mar del Plata</strong>
+                                <span>Temporada Alta</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="schedule-card">
+                    <div class="company-header header-rio">
+                        <h3>Río Uruguay</h3>
+                        <span class="route-badge">Regional</span>
+                    </div>
+                    <ul class="departure-list">
+                        <li>
+                            <div class="dep-time">07:00</div>
+                            <div class="dep-info">
+                                <strong>Concepción del Uruguay</strong>
+                                <span>Frecuente</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">11:00</div>
+                            <div class="dep-info">
+                                <strong>Colón / San José</strong>
+                                <span>Directo</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">17:30</div>
+                            <div class="dep-info">
+                                <strong>Federación</strong>
+                                <span>Turístico</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dep-time">22:15</div>
+                            <div class="dep-info">
+                                <strong>Concordia</strong>
+                                <span>Último servicio</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="schedule-footer">
+                <p><i class="fa-solid fa-circle-info"></i> Los pasajes se adquieren presencialmente en ventanilla.</p>
+                <a href="https://wa.me/5493446621925" class="btn btn-outline-dark">Consultar disponibilidad por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gastronomia" class="intro-section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Restaurante 24hs</span>
+                <h2 class="section-title">Parada Gastronómica</h2>
+            </div>
+            <div class="rooms-grid">
+                <article class="room-card">
+                    <div class="room-img-container">
+                        <img src="fotos hotel/fideos.jpeg" alt="Parrilla"> 
+                    </div>
+                    <div class="room-body">
+                        <h3>Pastas Caseras</h3>
+                        <p>Tallarines cintas con abundante salsa boloñesa y queso reggianito rallado. El sabor de la tradición italiana en cada bocado.</p>
+                    </div>
+                </article>
+                <article class="room-card featured">
+                    <div class="badge-featured">Favorito</div>
+                    <div class="room-img-container">
+                        <img src="fotos hotel/bife con papas.jpeg" alt="Pescados">
+                    </div>
+                    <div class="room-body">
+                        <h3>Parrilla al Asador</h3>
+                        <p>Corte de bife de chorizo en su punto justo, acompañado de papas fritas clásicas. La esencia de nuestra parrilla argentina.</p>
+                    </div>
+                </article>
+                <article class="room-card">
+                    <div class="room-img-container">
+                        <img src="fotos hotel/ravioles.jpeg" alt="Minutas">
+                    </div>
+                    <div class="room-body">
+                        <h3>Minutas & Sugerencias</h3>
+                        <p>Ravioles de ricota y verdura con salsa fileto casera. Comidas rápidas, ricas y reconfortantes para cualquier momento del día.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="amenities-section bg-pattern">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Servicios al Viajero</h2>
+            </div>
+            <div class="amenities-grid-modern">
+                <div class="amenity-box">
+                    <i class="fa-solid fa-gift icon-feature"></i>
+                    <h3>Regionales</h3>
+                    <p>Alfajores, dulces y artesanías.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-shower icon-feature"></i>
+                    <h3>Duchas</h3>
+                    <p>Baños equipados para refrescarse.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-wifi icon-feature"></i>
+                    <h3>Wi-Fi Gratis</h3>
+                    <p>Alta velocidad en todo el predio.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-square-parking icon-feature"></i>
+                    <h3>Estacionamiento</h3>
+                    <p>Seguridad y espacio para micros.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="footer-cta">
+        <div class="cta-overlay"></div>
+        <div class="cta-container">
+            <h2>Parador El Tagüé</h2>
+            <div class="contact-grid">
+                <div class="c-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Ruta 14, Km 55 - Gualeguaychú</span>
+                </div>
+                <div class="c-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>+54 9 3446 621925</span>
+                </div>
+            </div>
+            <div class="footer-buttons">
+                <a href="https://wa.me/5493446621925" class="btn btn-whatsapp-solid">WhatsApp</a>
+                <a href="tel:+5493446493085" class="btn btn-primary">Llamar</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Parador El Tagüé.</p>
+            </div>
+        </div>
+    </section>
+    
+    <script src="hotel3.js"></script>
+</body>
+</html>

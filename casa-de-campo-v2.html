@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Campo Tagüé | Exclusividad & Naturaleza</title>
+    <link rel="stylesheet" href="casa-de-campo-v2.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar" id="mainNav">
+        <a href="index.html" class="logo">TAGÜÉ <span style="font-size: 0.5em; display:block; line-height:1;">CASA DE CAMPO</span></a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Volver al Hotel</a></li>
+            <li><a href="#interiores">Interiores</a></li>
+            <li><a href="#exteriores">El Campo</a></li>
+            <li><a href="#experiencias">Experiencias</a></li>
+            <li><a href="#contacto" class="nav-btn">Reservar</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section" style="background-image: url('campo.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge">150 Hectáreas Exclusivas</span>
+            <h1>Refugio Íntimo en<br>la Naturaleza</h1>
+            <p>Desconecte del mundo y reconecte con el río Uruguay. Privacidad absoluta para familias y eventos.</p>
+            
+            <div class="hero-actions">
+                <a href="#video-tour" class="btn btn-primary"><i class="fa-solid fa-play"></i> Ver Video</a>
+                <a href="#modalidades" class="btn btn-outline">Opciones de Alquiler</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="video-tour" class="intro-section">
+        <div class="container intro-grid">
+            <div class="intro-text">
+                <span class="section-subtitle">A orillas del Río Uruguay</span>
+                <h2 class="section-title">Su Propio Espacio Privado</h2>
+                <div class="divider-left"></div>
+                <p>
+                    Nuestro complejo de campo es un espacio exclusivo diseñado para quienes buscan privacidad, tranquilidad y contacto directo con la naturaleza. 
+                    Un lugar perfecto para <strong>retiros, eventos privados</strong> o simplemente descansar en un entorno único.
+                </p>
+                
+                <div class="features-mini">
+                    <div class="f-mini"><i class="fa-solid fa-expand"></i> 150 Hectáreas</div>
+                    <div class="f-mini"><i class="fa-solid fa-users"></i> Hasta 20 Personas</div>
+                    <div class="f-mini"><i class="fa-solid fa-water"></i> Muelle Privado</div>
+                </div>
+            </div>
+            
+            <div class="video-wrapper">
+                <iframe 
+                    src="https://www.youtube.com/embed/LPkgZjcuvBs" 
+                    title="Casa de Campo El Tagüé" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="amenities-section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Comodidades</span>
+                <h2 class="section-title">La Casa Principal</h2>
+                <p class="section-desc">Construcción de 300 m² equipada con todo lo necesario para el confort moderno.</p>
+            </div>
+            
+            <div class="amenities-grid-modern">
+                <div class="amenity-box">
+                    <i class="fa-solid fa-house-chimney icon-feature"></i>
+                    <h3>Interiores</h3>
+                    <p>Living con hogar a leña, 5 dormitorios en suite y cocina equipada.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-person-swimming icon-feature"></i>
+                    <h3>Recreación</h3>
+                    <p>Piscina climatizada (12x6m), quincho con parrilla y fogón.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-tree icon-feature"></i>
+                    <h3>Entorno</h3>
+                    <p>Bosque nativo, senderos y avistaje de fauna autóctona.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-wifi icon-feature"></i>
+                    <h3>Servicios</h3>
+                    <p>Wi-Fi, generador eléctrico y seguridad perimetral.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="interiores" class="rooms-section bg-pattern">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Calidez & Confort</span>
+                <h2 class="section-title">Interiores</h2>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-card"><img src="fotos interiores/interior1.png" alt="Living" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos interiores/interior2.png" alt="Dormitorio" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos interiores/interior3.png" alt="Cocina" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos interiores/interior4.png" alt="Comedor" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos interiores/interior5.png" alt="Baño" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos interiores/interior6.png" alt="Sala de estar" onclick="openModal(this)"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="exteriores" class="rooms-section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Aire Libre</span>
+                <h2 class="section-title">Exteriores & Paisajes</h2>
+            </div>
+
+            <div class="gallery-grid" id="gallery-exteriores">
+                <div class="gallery-card"><img src="fotos exteriores/exterior1.png" alt="Río Uruguay" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos exteriores/exterior2.png" alt="Atardecer" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos exteriores/exterior3.png" alt="Bosque" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos exteriores/exterior4.png" alt="Senderos" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos exteriores/exterior6.png" alt="Muelle" onclick="openModal(this)"></div>
+                <div class="gallery-card"><img src="fotos exteriores/exterior7.png" alt="Panorámica" onclick="openModal(this)"></div>
+                
+                <div class="gallery-card gallery-hidden"><img src="fotos exteriores/exterior8.png" alt="Flora" onclick="openModal(this)"></div>
+                <div class="gallery-card gallery-hidden"><img src="fotos exteriores/exterior9.png" alt="Cielo" onclick="openModal(this)"></div>
+                <div class="gallery-card gallery-hidden"><img src="fotos exteriores/exterior10.png" alt="Amanecer" onclick="openModal(this)"></div>
+            </div>
+
+            <div class="text-center mt-20">
+                <button class="btn btn-outline-dark gallery-toggle-btn" onclick="toggleGallery('exteriores')">
+                    <span class="btn-text-more">Ver Más Fotos</span>
+                    <span class="btn-text-less" style="display: none;">Ver Menos</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencias" class="intro-section bg-pattern">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Lifestyle</span>
+                <h2 class="section-title">Experiencias Tagüé</h2>
+            </div>
+            
+            <div class="amenities-grid-modern">
+                <div class="amenity-box">
+                    <i class="fa-solid fa-fish-fins icon-feature"></i>
+                    <h3>Pesca Deportiva</h3>
+                    <p>Dorado, surubí y boga desde la costa o muelle.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-sailboat icon-feature"></i>
+                    <h3>Deportes Acuáticos</h3>
+                    <p>Kayak y paddle surf incluidos (con seguridad).</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-horse icon-feature"></i>
+                    <h3>Cabalgatas</h3>
+                    <p>Paseos guiados por baqueanos locales.</p>
+                </div>
+                <div class="amenity-box">
+                    <i class="fa-solid fa-binoculars icon-feature"></i>
+                    <h3>Avistaje de Aves</h3>
+                    <p>Más de 80 especies en nuestro predio protegido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modalidades" class="bg-light" style="padding: 80px 20px;">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Flexibilidad</span>
+                <h2 class="section-title">Modalidades de Alquiler</h2>
+            </div>
+
+            <div class="rooms-grid">
+                <article class="room-card text-center" style="padding: 40px 20px;">
+                    <i class="fa-regular fa-calendar-check icon-feature" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <div class="room-body">
+                        <h3>Fin de Semana</h3>
+                        <p>Viernes a Domingo. Ideal para escapadas de desconexión.</p>
+                        <ul class="room-amenities" style="justify-content: center;">
+                            <li>Check-in: Vie 15hs</li>
+                            <li>Check-out: Dom 18hs</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="room-card featured text-center" style="padding: 40px 20px;">
+                    <div class="badge-featured">Recomendado</div>
+                    <i class="fa-solid fa-calendar-week icon-feature" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <div class="room-body">
+                        <h3>Semanal</h3>
+                        <p>Lunes a Domingo. Vacaciones familiares extendidas.</p>
+                        <ul class="room-amenities" style="justify-content: center;">
+                            <li>Tarifa Especial</li>
+                            <li>Mínimo 7 días</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="room-card text-center" style="padding: 40px 20px;">
+                    <i class="fa-solid fa-champagne-glasses icon-feature" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                    <div class="room-body">
+                        <h3>Eventos</h3>
+                        <p>Bodas íntimas, retiros corporativos y celebraciones.</p>
+                        <ul class="room-amenities" style="justify-content: center;">
+                            <li>Hasta 50 pax</li>
+                            <li>Catering Opcional</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="text-center mt-20">
+                <p class="section-desc">⚠️ Importante: Se alquila la propiedad completa, no por habitaciones individuales.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="footer-cta">
+        <div class="cta-overlay"></div>
+        <div class="cta-container">
+            <h2>¿Listo para su estadía en el campo?</h2>
+            <p>Consulte disponibilidad y organice su evento exclusivo.</p>
+            
+            <div class="contact-grid">
+                <div class="c-item">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>+54 9 3446 621925</span>
+                </div>
+                <div class="c-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>reservashoteltague@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="footer-buttons">
+                <a href="https://wa.me/5493446621925" class="btn btn-whatsapp-solid">Consultar por WhatsApp</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Complejo de Campo El Tagüé.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div class="modal-caption" id="modalCaption"></div>
+        <button class="modal-nav modal-prev" onclick="event.stopPropagation(); navigateImage(-1)">&#10094;</button>
+        <button class="modal-nav modal-next" onclick="event.stopPropagation(); navigateImage(1)">&#10095;</button>
+    </div>
+
+    <script src="hotel3.js"></script>
+    
+    <script>
+        // Toggle Gallery Logic
+        function toggleGallery(galleryId) {
+            const gallery = document.getElementById('gallery-' + galleryId);
+            const hiddenItems = gallery.querySelectorAll('.gallery-hidden');
+            const button = event.currentTarget;
+            const moreText = button.querySelector('.btn-text-more');
+            const lessText = button.querySelector('.btn-text-less');
+            
+            hiddenItems.forEach(item => {
+                if (item.style.display === 'block') {
+                    item.style.display = ''; // Vuelve a la clase CSS
+                    moreText.style.display = 'inline';
+                    lessText.style.display = 'none';
+                } else {
+                    item.style.display = 'block';
+                    moreText.style.display = 'none';
+                    lessText.style.display = 'inline';
+                }
+            });
+        }
+
+        // Modal Logic
+        let currentImages = [];
+        let currentIndex = 0;
+
+        function openModal(img) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const caption = document.getElementById('modalCaption');
+            
+            // Buscar todas las imágenes en la misma grilla visible
+            const gallery = img.closest('.gallery-grid');
+            // Seleccionamos solo las visibles o todas si quieres navegar por todo
+            currentImages = Array.from(gallery.querySelectorAll('img'));
+            
+            currentIndex = currentImages.indexOf(img);
+            
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+            caption.textContent = img.alt;
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function navigateImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = currentImages.length - 1;
+            if (currentIndex >= currentImages.length) currentIndex = 0;
+            
+            const img = currentImages[currentIndex];
+            document.getElementById('modalImage').src = img.src;
+            document.getElementById('modalCaption').textContent = img.alt;
+        }
+
+        // Close on Escape
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>

@@ -15,36 +15,17 @@
 <body>
 
     <nav class="navbar" id="mainNav">
-    <div class="nav-container">
         <a href="index.html" class="logo">TAGÜÉ</a>
         <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <i class="fa-solid fa-bars"></i>
         </div>
-        <ul class="nav-links">
+        <ul class="nav-links" id="nav-links">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#habitaciones">Habitaciones</a></li>
             <li><a href="#gastronomia">Gastronomía</a></li>
             <li><a href="#servicios">Servicios</a></li>
             <li><a href="#contacto" class="nav-btn">Reservar</a></li>
         </ul>
-    </div>
-</nav>
-
-<script src="hotel3.js"></script>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">TAGÜÉ</a>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#habitaciones">Habitaciones</a></li>
-                <li><a href="#gastronomia">Gastronomía</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#contacto" class="nav-btn">Reservar</a></li>
-            </ul>
-            <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
-        </div>
     </nav>
 
     <section id="inicio" class="hero-section">
@@ -304,10 +285,6 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script>
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-        });
-    </script>
+    <script src="hotel3.js"></script>
 </body>
 </html>

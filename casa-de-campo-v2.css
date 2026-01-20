@@ -1,0 +1,359 @@
+/* ================================
+   1. VARIABLES & CONFIGURACIÓN (IDÉNTICO HOTEL)
+   ================================ */
+:root {
+    /* Paleta de Colores "Litoral Premium" */
+    --primary: #2C5F2D;      /* Verde Bosque Profundo */
+    --primary-dark: #1A3C1B;
+    --accent: #D4A373;       /* Dorado Madera/Arena */
+    --accent-hover: #C6925D;
+    
+    --text-dark: #2D3436;
+    --text-light: #636e72;
+    --bg-body: #FAFAF5;      /* Blanco Hueso */
+    --bg-white: #FFFFFF;
+    
+    /* Tipografías */
+    --font-heading: 'Playfair Display', serif; 
+    --font-body: 'Lato', sans-serif;
+    
+    /* Sombras y Bordes */
+    --shadow-soft: 0 10px 40px rgba(0,0,0,0.06);
+    --shadow-card: 0 5px 15px rgba(0,0,0,0.05);
+    --radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-body);
+    color: var(--text-dark);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; color: var(--primary-dark); }
+a { text-decoration: none; transition: var(--transition); }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ================================
+   2. NAVEGACIÓN (IDÉNTICO HOTEL)
+   ================================ */
+.navbar {
+    position: absolute;
+    top: 0; left: 0; width: 100%;
+    padding: 15px 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+.navbar.scrolled {
+    position: fixed;
+    background: var(--primary-dark);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    animation: slideDown 0.5s ease;
+}
+@keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+
+.logo {
+    color: #FFF; 
+    font-family: var(--font-heading); 
+    font-size: 1.5rem; 
+    font-weight: 700; 
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 100%; left: 0; width: 100%;
+    background: var(--primary-dark);
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+}
+.nav-links.active { display: flex; }
+
+.nav-links a { 
+    color: rgba(255,255,255,0.9); 
+    font-weight: 400; 
+    font-size: 0.95rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+.nav-links a:hover { color: var(--accent); }
+
+.nav-btn {
+    border: 1px solid #FFF; 
+    padding: 10px 20px; 
+    border-radius: 50px;
+    text-align: center;
+    display: block;
+}
+.nav-btn:hover { background: #FFF; color: var(--primary-dark) !important; }
+
+.menu-toggle { display: block; color: #FFF; font-size: 1.5rem; cursor: pointer; }
+
+/* ================================
+   3. HERO SECTION (ADAPTADO CAMPO)
+   ================================ */
+.hero-section {
+    height: 100vh;
+    min-height: 500px;
+    background-color: #333;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+}
+.hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+}
+.hero-content { position: relative; z-index: 2; color: #FFF; max-width: 90%; padding: 20px; }
+
+.hero-badge {
+    display: inline-block; background: var(--accent); color: #FFF;
+    padding: 5px 15px; border-radius: 50px; 
+    font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem; line-height: 1.1; margin-bottom: 15px; color: #FFF;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+.hero-content p { font-size: 1rem; margin-bottom: 25px; opacity: 0.9; font-weight: 300; }
+
+.hero-actions { display: flex; flex-direction: column; gap: 15px; align-items: center; }
+
+.btn { 
+    display: inline-block; padding: 12px 30px; border-radius: 50px; 
+    font-weight: 700; text-transform: uppercase; letter-spacing: 1px; 
+    font-size: 0.8rem; cursor: pointer; width: 100%; max-width: 280px; text-align: center;
+}
+.btn-primary { background: var(--accent); color: #FFF; border: 1px solid var(--accent); }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(212, 163, 115, 0.4); }
+.btn-outline { background: transparent; color: #FFF; border: 1px solid #FFF; }
+.btn-outline:hover { background: #FFF; color: var(--primary-dark); }
+.btn-outline-dark { background: transparent; color: var(--primary-dark); border: 1px solid var(--primary-dark); }
+.btn-outline-dark:hover { background: var(--primary-dark); color: #FFF; }
+
+.mt-20 { margin-top: 30px; }
+
+/* ================================
+   4. ESTILOS GENERALES
+   ================================ */
+section { padding: 60px 20px; }
+.bg-light { background: #FFF; }
+.bg-pattern { 
+    background-color: #F8F7F2; 
+    background-image: radial-gradient(#E0E0E0 1px, transparent 1px); 
+    background-size: 20px 20px; 
+}
+.container { max-width: 1200px; margin: 0 auto; }
+.text-center { text-align: center; }
+
+.section-subtitle { 
+    display: block; color: var(--accent); font-weight: 700; 
+    text-transform: uppercase; letter-spacing: 2px; font-size: 0.75rem; margin-bottom: 10px; 
+}
+.section-title { font-size: 2rem; color: var(--primary-dark); margin-bottom: 15px; }
+.section-desc { color: var(--text-light); max-width: 800px; margin: 0 auto 40px; font-size: 0.95rem; }
+.divider-left { width: 60px; height: 3px; background: var(--accent); margin-bottom: 20px; }
+
+/* ================================
+   5. VIDEO & INTRO (CAMPO SPECIFIC)
+   ================================ */
+.intro-section { padding-top: 80px; }
+.intro-grid { display: block; }
+.features-mini { display: flex; gap: 15px; margin-top: 20px; flex-wrap: wrap; }
+.f-mini { 
+    font-size: 0.85rem; font-weight: 700; color: var(--primary-dark); 
+    display: flex; align-items: center; gap: 8px; 
+}
+.f-mini i { color: var(--accent); }
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    margin-top: 30px;
+    background: #000;
+}
+.video-wrapper iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
+/* ================================
+   6. AMENITIES / CARACTERÍSTICAS
+   ================================ */
+.amenities-grid-modern { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.amenity-box {
+    background: #FFF; padding: 30px 20px; text-align: center;
+    border-radius: var(--radius); box-shadow: var(--shadow-card);
+    transition: var(--transition);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.amenity-box:hover { transform: translateY(-5px); box-shadow: var(--shadow-soft); }
+.icon-feature { font-size: 2.5rem; color: var(--accent); margin-bottom: 20px; }
+.amenity-box h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--primary-dark); }
+.amenity-box p { font-size: 0.9rem; color: var(--text-light); }
+
+/* ================================
+   7. GALLERY GRID (ADAPTADO CAMPO)
+   ================================ */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.gallery-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    cursor: pointer;
+    height: 250px;
+    position: relative;
+}
+.gallery-card img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.gallery-card:hover img { transform: scale(1.05); }
+
+.gallery-hidden { display: none; } /* Controlado por JS */
+
+/* ================================
+   8. ROOM CARDS (PARA MODALIDADES)
+   ================================ */
+.rooms-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+.room-card {
+    background: #FFF; border-radius: var(--radius); overflow: hidden;
+    box-shadow: var(--shadow-card); transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+.room-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-soft); }
+.featured { border: 2px solid var(--accent); position: relative; }
+.badge-featured {
+    position: absolute; top: 15px; right: 15px; background: var(--accent); color: #FFF;
+    padding: 5px 12px; font-size: 0.7rem; font-weight: 700; 
+    text-transform: uppercase; border-radius: 4px; z-index: 10;
+}
+.room-body { padding: 25px; }
+.room-body h3 { font-size: 1.4rem; margin-bottom: 10px; }
+.room-body p { color: var(--text-light); font-size: 0.9rem; margin-bottom: 15px; }
+.room-amenities { 
+    display: flex; flex-wrap: wrap; gap: 10px;
+    border-top: 1px solid #EEE; padding-top: 15px; 
+    font-size: 0.8rem; color: var(--primary-dark); font-weight: 700;
+}
+.room-amenities li i { color: var(--accent); margin-right: 5px; }
+
+/* ================================
+   9. MODAL (ESTILO OSCURO)
+   ================================ */
+.modal {
+    display: none; position: fixed; z-index: 9999;
+    padding: 20px; left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(26, 60, 27, 0.95); /* Verde muy oscuro */
+    align-items: center; justify-content: center;
+}
+.modal-content {
+    max-width: 90%; max-height: 85vh; object-fit: contain;
+    border-radius: 4px; box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+}
+.modal-close {
+    position: absolute; top: 30px; right: 30px;
+    color: white; font-size: 40px; cursor: pointer; transition: 0.3s;
+}
+.modal-close:hover { color: var(--accent); }
+.modal-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: transparent; color: white; border: none;
+    font-size: 40px; cursor: pointer; transition: 0.3s; padding: 20px;
+}
+.modal-nav:hover { color: var(--accent); }
+.modal-prev { left: 10px; }
+.modal-next { right: 10px; }
+.modal-caption {
+    position: absolute; bottom: 20px; left: 0; width: 100%;
+    text-align: center; color: #FFF; font-family: var(--font-body);
+}
+
+/* ================================
+   10. FOOTER
+   ================================ */
+.footer-cta {
+    position: relative; 
+    background: url('fotos hotel/pileta2.jpg') center/cover; /* Usamos la del hotel o una genérica */
+    text-align: center; color: #FFF; padding: 80px 20px 40px;
+}
+.cta-overlay { position: absolute; inset: 0; background: rgba(26, 60, 27, 0.9); }
+.cta-container { position: relative; z-index: 2; max-width: 100%; margin: 0 auto; }
+.cta-container h2 { color: #FFF; font-size: 2rem; margin-bottom: 15px; }
+.cta-container p { font-size: 1rem; opacity: 0.8; margin-bottom: 40px; }
+
+.contact-grid { display: flex; flex-direction: column; gap: 20px; margin-bottom: 40px; }
+.c-item { display: flex; flex-direction: column; align-items: center; font-size: 0.95rem; }
+.c-item i { font-size: 1.3rem; color: var(--accent); margin-bottom: 8px; }
+
+.footer-buttons { display: flex; flex-direction: column; gap: 15px; margin-bottom: 60px; }
+.btn-whatsapp-solid { background: #25D366; color: #FFF; border: none; }
+.btn-whatsapp-solid:hover { background: #1ebe57; color: #FFF; }
+
+.footer-bottom { 
+    border-top: 1px solid rgba(255,255,255,0.1); padding-top: 25px;
+    display: flex; flex-direction: column; gap: 15px; color: #AAA; font-size: 0.85rem; 
+}
+.socials { display: flex; justify-content: center; gap: 15px; }
+.socials a { color: #FFF; font-size: 1.2rem; }
+
+/* ================================
+   11. MEDIA QUERIES (TABLET/DESKTOP)
+   ================================ */
+@media (min-width: 768px) {
+    .hero-content h1 { font-size: 3rem; }
+    .hero-actions { flex-direction: row; justify-content: center; }
+    .btn { width: auto; }
+    .section-title { font-size: 2.5rem; }
+    
+    .intro-grid {
+        display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+    }
+    .video-wrapper { margin-top: 0; }
+    
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+    .amenities-grid-modern { grid-template-columns: repeat(2, 1fr); }
+    .rooms-grid { grid-template-columns: repeat(3, 1fr); }
+    
+    .contact-grid { flex-direction: row; justify-content: center; gap: 30px; }
+    .footer-buttons { flex-direction: row; justify-content: center; }
+}
+
+@media (min-width: 1024px) {
+    .navbar { padding: 20px 5%; }
+    .nav-links {
+        display: flex; position: relative; flex-direction: row;
+        gap: 30px; align-items: center; background: transparent;
+        padding: 0; width: auto; top: auto; left: auto;
+    }
+    .menu-toggle { display: none; }
+    
+    .hero-section { height: 90vh; background-attachment: fixed; }
+    .hero-content h1 { font-size: 4rem; }
+    
+    section { padding: 100px 20px; }
+    .intro-section { padding-top: 140px; }
+    .amenities-grid-modern { grid-template-columns: repeat(4, 1fr); gap: 30px; }
+    
+    .footer-cta { padding: 120px 20px 40px; background-attachment: fixed; }
+}

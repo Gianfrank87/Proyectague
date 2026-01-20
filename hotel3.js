@@ -1,29 +1,30 @@
-// hotel3.js
+// hotel3.js - Mobile First Version
 
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('#mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('#nav-links');
     const navbar = document.querySelector('#mainNav');
 
     // 1. Manejo del Menú Mobile
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        // Animación de la hamburguesa
-        menuToggle.classList.toggle('is-active');
-        
-        // Efecto visual en las barras
-        const bars = document.querySelectorAll('.bar');
-        if(navLinks.classList.contains('active')) {
-            bars[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
-            bars[1].style.opacity = '0';
-            bars[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
-        } else {
-            bars.forEach(bar => bar.style.transform = 'none');
-            bars.forEach(bar => bar.style.opacity = '1');
-        }
-    });
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('is-active');
+        });
 
-    // 2. Cambio de estilo de Navbar al hacer Scroll
+        // 2. Cerrar menú al hacer click en un link (Para móviles)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                // Solo cerrar en móviles (cuando el toggle está visible)
+                if (window.getComputedStyle(menuToggle).display !== 'none') {
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('is-active');
+                }
+            });
+        });
+    }
+
+    // 3. Cambio de estilo de Navbar al hacer Scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -32,8 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 3. Animación de "Revelar" al hacer scroll
-    // Esto hace que las secciones aparezcan suavemente mientras el usuario baja
+    // 4. Animación de "Revelar" al hacer scroll
     const reveals = document.querySelectorAll('.room-card, .section-title, .dining-content');
     
     const revealOnScroll = () => {
@@ -53,14 +53,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ejecutar una vez al cargar por si ya hay elementos visibles
     revealOnScroll();
 
-    // 4. Cerrar menú al hacer click en un link (Para móviles)
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            // Reset de hamburguesa
-            const bars = document.querySelectorAll('.bar');
-            bars.forEach(bar => bar.style.transform = 'none');
-            bars.forEach(bar => bar.style.opacity = '1');
+    // 5. Smooth scroll para enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            
+            // Ignorar enlaces que solo son "#"
+            if (href === '#') {
+                return;
+            }
+            
+            const target = document.querySelector(href);
+            
+            if (target) {
+                e.preventDefault();
+                
+                // Calcular offset para compensar navbar fijo en desktop
+                const navbarHeight = navbar.offsetHeight;
+                const targetPosition = target.offsetTop - navbarHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
